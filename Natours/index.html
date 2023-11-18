@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Natours | Exciting tours for adventurous people</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,30 +13,74 @@
     />
 
     <!-- <link rel="stylesheet" href="css/icon-font.css" /> -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-
-    <title>Natours | Exciting tours for adventurous people</title>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./source/assets/images/favicon.png"
+    />
+    <link rel="stylesheet" href="./source/sass/main.scss" />
   </head>
-  <body class="body">
+  <body>
     <header class="hero">
       <img
-        class="logo"
-        src="./img/logo-white.png"
+        class="hero__logo"
+        src="./source/assets/images/logo-white.png"
         alt="Natours' logo"
         width="195"
         height="100"
       />
       <!-- nav here in the future -->
-      <div class="headline-and-button-container">
-        <h1 class="h1 headline">
-          <span class="main-headline">Outdoors</span
-          ><span class="sub-headline">is where life happens</span>
+      <div class="hero__headline-and-button-container">
+        <!-- No typo at class name btw -->
+        <h1 class="hero-heading">
+          <span class="hero-heading--main">Outdoors</span
+          ><span class="hero-heading--sub">is where life happens</span>
         </h1>
-        <a class="button --white" href="#">Discover Our Tours</a>
+        <a class="button button--white button--hero" href="#"
+          >Discover Our Tours</a
+        >
       </div>
     </header>
-    <main></main>
+    <main>
+      <div class="gird">
+        <div class="grid__row">
+          <div class="grid__column grid__column--size--1-of-2">1 of 2</div>
+          <div class="grid__column grid__column--size--1-of-2">1 of 2</div>
+        </div>
+
+        <div class="grid__row">
+          <div class="grid__column grid__column--size--2-of-2">2 of 2</div>
+        </div>
+
+        <div class="grid__row">
+          <div class="grid__column grid__column--size--1-of-3">1 of 3</div>
+          <div class="grid__column grid__column--size--1-of-3">1 of 3</div>
+          <div class="grid__column grid__column--size--1-of-3">1 of 3</div>
+        </div>
+
+        <div class="grid__row">
+          <div class="grid__column grid__column--size--1-of-3">1 of 3</div>
+          <div class="grid__column grid__column--size--2-of-3">2 of 3</div>
+        </div>
+
+        <div class="grid__row">
+          <div class="grid__column grid__column--size--3-of-3">3 of 3</div>
+        </div>
+
+        <div class="grid__row">
+          <div class="grid__column grid__column--size--1-of-4">1 of 4</div>
+          <div class="grid__column grid__column--size--1-of-4">1 of 4</div>
+          <div class="grid__column grid__column--size--1-of-4">1 of 4</div>
+          <div class="grid__column grid__column--size--1-of-4">1 of 4</div>
+        </div>
+
+        <div class="grid__row">
+          <div class="grid__column grid__column--size--1-of-4">1 of 4</div>
+          <div class="grid__column grid__column--size--1-of-4">1 of 4</div>
+          <div class="grid__column grid__column--size--2-of-4">2 of 4</div>
+        </div>
+      </div>
+    </main>
     <footer></footer>
   </body>
 </html>

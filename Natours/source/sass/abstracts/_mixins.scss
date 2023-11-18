@@ -1,0 +1,19 @@
+@mixin clear-fix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin column-gap($gap) {
+  &:not(:last-child) {
+    margin-right: $gap;
+  }
+}
+
+@mixin row-gap($gap) {
+  &:not(:last-child) {
+    margin-bottom: $gap;
+  }
+}

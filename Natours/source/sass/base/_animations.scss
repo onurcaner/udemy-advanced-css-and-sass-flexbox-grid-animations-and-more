@@ -1,0 +1,56 @@
+%fade-in {
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+}
+
+%transition--fast {
+  transition: all 0.2s ease;
+}
+
+%transition--normal {
+  transition: all 0.4s ease;
+}
+
+%transition--slow {
+  transition: all 0.6s ease;
+}
+
+@keyframes fade-in--to-left {
+  0% {
+    opacity: 0;
+    translate: 4rem;
+  }
+  80% {
+    translate: -0.125rem;
+  }
+  100% {
+    opacity: 1;
+    translate: 0;
+  }
+}
+
+@keyframes fade-in--to-right {
+  0% {
+    opacity: 0;
+    translate: -4rem;
+  }
+  80% {
+    translate: 0.125rem;
+  }
+  100% {
+    opacity: 1;
+    translate: 0;
+  }
+}
+
+@keyframes fade-in--to-up {
+  0% {
+    opacity: 0;
+    translate: 0 2rem;
+  }
+  100% {
+    opacity: 1;
+    translate: 0;
+  }
+}

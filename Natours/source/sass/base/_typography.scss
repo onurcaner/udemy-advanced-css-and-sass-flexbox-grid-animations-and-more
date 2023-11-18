@@ -1,0 +1,6 @@
+@use 'sass:color';
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: color.change($color--grey, $lightness: 30%);
+}

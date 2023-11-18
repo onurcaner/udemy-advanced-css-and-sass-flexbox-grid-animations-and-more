@@ -1,0 +1,44 @@
+@use 'sass:color';
+
+.button {
+  position: relative;
+  text-transform: uppercase;
+  padding: 1em 2em;
+  border-bottom: unset;
+  border-radius: 2em;
+  color: white;
+  background-color: $color--primary;
+  box-shadow: $shadow--xs;
+  @extend %transition--fast;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: inherit;
+    border-radius: inherit;
+    @extend %transition--normal;
+  }
+
+  &:hover {
+    box-shadow: $shadow--m;
+    translate: 0 -0.125rem;
+
+    &::before {
+      scale: 1.25 1.5;
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    box-shadow: $shadow--s;
+    translate: 0 -0.0625rem;
+  }
+
+  &--white {
+    color: color.change($color--grey, $lightness: 30%);
+    background-color: white;
+  }
+}
