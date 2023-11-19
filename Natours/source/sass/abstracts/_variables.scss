@@ -1,11 +1,41 @@
+@use 'sass:color';
+@use 'sass:math';
+
+/* Given Colors */
 $color--primary--light: #7ed56f;
 $color--primary: #55c57a;
 $color--primary--dark: #28b485;
+$color--white: #fff;
 $color--grey: #808080;
+$color--black: #000;
 
-$shadow--xs: 0 0 0.5rem -0.1rem rgba(0, 0, 0, 0.08);
-$shadow--s: 0 0 0.8rem -0.16rem rgba(0, 0, 0, 0.1);
-$shadow--m: 0 0 1.25rem -0.25rem rgba(0, 0, 0, 0.12);
-$shadow--l: 0 0 2rem -0.4rem rgba(0, 0, 0, 0.14);
-$shadow--xl: 0 0 2.5rem -0.5rem rgba(0, 0, 0, 0.16);
-$shadow--xxl: 0 0 4rem -0.8rem rgba(0, 0, 0, 0.18);
+/* Text Color Grey */
+$color--text--dark: color.change($color--grey, $lightness: 25%);
+$color--text: color.change($color--grey, $lightness: 30%);
+$color--text--light: color.change($color--grey, $lightness: 35%);
+$color--text--lighter: color.change($color--grey, $lightness: 40%);
+$color--text--lightest: color.change($color--grey, $lightness: 45%);
+
+/* Text Color Main */
+$color--text--primary: color.change($color--primary, $lightness: 25%);
+$color--text--primary--safe: color.change($color--primary, $lightness: 35%);
+$color--text--primary--safe-light: color.change(
+  $color--primary--light,
+  $lightness: 34%
+);
+$color--text--primary--safe-dark: color.change(
+  $color--primary--dark,
+  $lightness: 32%
+);
+
+/* Spacing */
+$length--horizontal-padding: 2rem;
+$length--max-width: 72rem - 2 * $length--horizontal-padding;
+
+/* Shadows */
+$shadow--xs: 0 0 0.5rem -0.1rem rgba($color--black, 0.08);
+$shadow--s: 0 0 0.8rem -0.16rem rgba($color--black, 0.1);
+$shadow--m: 0 0 1.25rem -0.25rem rgba($color--black, 0.12);
+$shadow--l: 0 0 2rem -0.4rem rgba($color--black, 0.14);
+$shadow--xl: 0 0 2.5rem -0.5rem rgba($color--black, 0.16);
+$shadow--xxl: 0 0 4rem -0.8rem rgba($color--black, 0.18);

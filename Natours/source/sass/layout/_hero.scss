@@ -2,14 +2,14 @@
 
 .hero {
   position: relative;
-  height: calc(100vh - 4rem);
+  height: calc(100vh - #{$length--horizontal-padding});
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   background-color: $color--primary;
   background-image: linear-gradient(
       to right bottom,
-      color.adjust($color--primary--light, $alpha: -0.2),
-      color.adjust($color--primary--dark, $alpha: -0.2)
+      color.change($color--primary--light, $alpha: 0.8),
+      color.change($color--primary--dark, $alpha: 0.8)
     ),
     url(../assets/images/hero.jpg);
   background-size: cover;
@@ -17,10 +17,9 @@
 
   &__logo {
     position: absolute;
-    font-size: 2.5rem;
-    top: 1em;
-    left: 1em;
-    height: 1em;
+    top: $length--horizontal-padding;
+    left: $length--horizontal-padding;
+    height: 2rem;
   }
 
   &__headline-and-button-container {
@@ -31,6 +30,7 @@
 
   .button--hero {
     font-size: 1.125rem;
+    padding: 1.5rem 3rem;
     animation-delay: 0.8s;
     @extend %fade-in;
     animation-name: fade-in--to-up;

@@ -3,8 +3,13 @@ html {
 }
 
 body {
-  padding: 2rem;
-  background-color: white;
+  padding: $length--horizontal-padding;
+  background-color: $color--white;
+}
+
+main {
+  max-width: $length--max-width;
+  @include margin-auto;
 }
 
 .grid {
@@ -12,13 +17,11 @@ body {
   $gap--row: 8rem;
 
   &__row {
-    background-color: blueviolet;
     @include clear-fix;
     @include row-gap($gap--row);
   }
 
   &__column {
-    background-color: orangered;
     float: left;
     width: 100%;
     @include column-gap($gap--column);

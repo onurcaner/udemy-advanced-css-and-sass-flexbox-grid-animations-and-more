@@ -1,28 +1,16 @@
 .hero-heading {
-  font-size: 3.4rem;
-  letter-spacing: 1ch;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 700;
-  color: white;
+  @include hero-heading;
 
   &--main,
   &--sub {
-    display: block;
     @extend %fade-in;
   }
 
   &--main {
-    font-size: 4.5rem;
-    letter-spacing: 0.8ch;
-    margin-bottom: 2rem;
     animation-name: fade-in--to-right;
   }
 
   &--sub {
-    font-size: 1.5rem;
-    letter-spacing: 1.25ch;
-    margin-bottom: 4rem;
     animation-name: fade-in--to-left;
   }
 }

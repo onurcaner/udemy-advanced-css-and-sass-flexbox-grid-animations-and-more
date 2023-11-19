@@ -16,6 +16,28 @@
   transition: all 0.6s ease;
 }
 
+%transition--hover-active-translate {
+  &:hover {
+    translate: 0 -0.125rem;
+  }
+
+  &:active {
+    translate: 0 -0.0625rem;
+  }
+}
+
+%transition--hover-active-shadow--xs {
+  box-shadow: $shadow--xs;
+
+  &:hover {
+    box-shadow: $shadow--m;
+  }
+
+  &:active {
+    box-shadow: $shadow--s;
+  }
+}
+
 @keyframes fade-in--to-left {
   0% {
     opacity: 0;

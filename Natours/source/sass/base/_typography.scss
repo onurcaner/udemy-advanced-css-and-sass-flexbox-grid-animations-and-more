@@ -1,6 +1,64 @@
-@use 'sass:color';
-
 body {
   font-family: 'Lato', sans-serif;
-  color: color.change($color--grey, $lightness: 30%);
+  color: $color--text;
+}
+
+%heading {
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin hero-heading {
+  @extend %heading;
+  font-size: 3.4rem;
+  letter-spacing: 1ch;
+  color: $color--white;
+
+  &--main,
+  &--sub {
+    display: block;
+  }
+
+  &--main {
+    font-size: 4.5rem;
+    letter-spacing: 0.8ch;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  &--sub {
+    font-size: 1.5rem;
+    letter-spacing: 1.25ch;
+    margin-bottom: 4rem;
+  }
+}
+
+%section-heading {
+  @extend %heading;
+  font-size: 2rem;
+  letter-spacing: 0.2ch;
+  background-image: linear-gradient(
+    to right,
+    $color--primary--light,
+    $color--primary--dark
+  );
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 4rem;
+}
+
+%content-heading {
+  @extend %heading;
+  text-align: start;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+%content-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 65ch;
+  color: $color--text--light;
+  @include margin-bottom(2.25rem);
 }

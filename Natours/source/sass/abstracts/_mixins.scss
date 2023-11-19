@@ -17,3 +17,18 @@
     margin-bottom: $gap;
   }
 }
+
+@mixin margin-bottom($margin) {
+  &:not(:last-child) {
+    margin-bottom: $margin;
+  }
+
+  &.force-margin-bottom {
+    margin-bottom: 2.25rem;
+  }
+}
+
+@mixin margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
