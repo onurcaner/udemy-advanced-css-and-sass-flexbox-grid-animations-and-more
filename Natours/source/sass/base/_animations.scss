@@ -26,15 +26,35 @@
   }
 }
 
-%transition--hover-active-shadow--xs {
-  box-shadow: $shadow--xs;
+%transition--hover-active-shadow--s {
+  box-shadow: $shadow--s;
 
   &:hover {
     box-shadow: $shadow--m;
   }
 
   &:active {
-    box-shadow: $shadow--s;
+    box-shadow: $shadow--xs;
+  }
+}
+
+%transition--hover-shadow--m {
+  box-shadow: $shadow--m;
+
+  &:hover {
+    box-shadow: $shadow--xl;
+  }
+}
+
+%transition--hover-translate {
+  &:hover {
+    translate: 0 -0.25rem;
+  }
+}
+
+%transition--hover-scale {
+  &:hover {
+    scale: 1.02;
   }
 }
 

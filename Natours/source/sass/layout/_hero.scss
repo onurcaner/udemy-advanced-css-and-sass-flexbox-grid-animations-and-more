@@ -1,18 +1,7 @@
-@use 'sass:color';
-
 .hero {
   position: relative;
-  height: calc(100vh - #{$length--horizontal-padding});
-  width: 100%;
+  @include section--background-image-gradient('../assets/images/hero.jpg');
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  background-color: $color--primary;
-  background-image: linear-gradient(
-      to right bottom,
-      color.change($color--primary--light, $alpha: 0.8),
-      color.change($color--primary--dark, $alpha: 0.8)
-    ),
-    url(../assets/images/hero.jpg);
-  background-size: cover;
   background-position: top;
 
   &__logo {

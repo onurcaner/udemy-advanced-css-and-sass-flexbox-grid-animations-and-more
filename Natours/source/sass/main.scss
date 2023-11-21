@@ -8,12 +8,15 @@
 @import 'base/typography';
 @import 'base/base';
 
-@import 'components/button';
 @import 'components/anchor';
-@import 'components/hero-heading';
-@import 'components/section-heading';
+@import 'components/button';
 @import 'components/content';
+@import 'components/feature-card';
+@import 'components/hero-heading';
+@import 'components/image-composition';
+@import 'components/section-heading';
 
+@import 'layout/grid';
 @import 'layout/hero';
 
 @import 'pages/home';

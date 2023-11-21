@@ -4,25 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Natours | Exciting tours for adventurous people</title>
-
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./source/assets/images/favicon.png"
+    />
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- <link rel="stylesheet" href="css/icon-font.css" /> -->
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="./source/assets/images/favicon.png"
-    />
+    <!-- Linea Iconfont -->
+    <link rel="stylesheet" href="./source/css/linea-iconfont.css" />
+    <!-- Styles -->
     <link rel="stylesheet" href="./source/sass/main.scss" />
   </head>
   <body>
     <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero-section hero">
       <img
         class="hero__logo"
         src="./source/assets/images/logo-white.png"
@@ -32,10 +34,14 @@
       />
       <!-- nav here in the future -->
       <div class="hero__headline-and-button-container">
-        <!-- No typo at class name btw -->
         <h1 class="hero-heading">
-          <span class="hero-heading--main">Outdoors</span
-          ><span class="hero-heading--sub">is where life happens</span>
+          <span class="hero-heading--main"
+            >Outdoor<span class="hero-heading--last-letter">s</span></span
+          ><span class="hero-heading--sub"
+            >is where life happen<span class="hero-heading--last-letter"
+              >s</span
+            ></span
+          >
         </h1>
         <a class="button button--white button--hero" href="#"
           >Discover Our Tours</a
@@ -44,7 +50,7 @@
     </header>
     <main>
       <!-- About Section -->
-      <section class="about">
+      <section class="about-section">
         <h2 class="section-heading">Exciting Tours For Adventurous People</h2>
         <div class="grid">
           <div class="grid__row">
@@ -76,10 +82,83 @@
               </li>
             </ul>
             <div class="grid__column grid__column--size--1-of-2">
-              IMAGE CONTAINER
+              <ul class="image-composition">
+                <li class="image-composition__image-container">
+                  <img
+                    class="image-composition__image image-composition__image--1"
+                    src="./source/assets/images/nat-1-large.jpg"
+                    alt="A river inside of a forest surrounded by mountains"
+                    width="1000"
+                    height="667"
+                  />
+                </li>
+                <li class="image-composition__image-container">
+                  <img
+                    class="image-composition__image image-composition__image--2"
+                    src="./source/assets/images/nat-2-large.jpg"
+                    alt="Bicycle ride at road on a green mountain"
+                    width="1000"
+                    height="664"
+                  />
+                </li>
+                <li class="image-composition__image-container">
+                  <img
+                    class="image-composition__image image-composition__image--3"
+                    src="./source/assets/images/nat-3-large.jpg"
+                    alt="Walk on top of a misty green mountain"
+                    width="1000"
+                    height="667"
+                  />
+                </li>
+              </ul>
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="grid features-section-container">
+        <ul class="grid__row features-section">
+          <li class="grid__column grid__column--size--1-of-4">
+            <div class="feature-card">
+              <i class="feature-card__icon icon-basic-world"></i>
+              <h2 class="content-heading">Explore the world</h2>
+              <p class="content-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis
+                corrupti ipsam sed fuga aliquam nihil tenetur perspiciatis
+              </p>
+            </div>
+          </li>
+          <li class="grid__column grid__column--size--1-of-4">
+            <div class="feature-card">
+              <i class="feature-card__icon icon-basic-compass"></i>
+              <h2 class="content-heading">Meet nature</h2>
+              <p class="content-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptate omnis doloribus repellendus accusantium, fugiat cumque
+              </p>
+            </div>
+          </li>
+          <li class="grid__column grid__column--size--1-of-4">
+            <div class="feature-card">
+              <i class="feature-card__icon icon-basic-map"></i>
+              <h2 class="content-heading">Find your way</h2>
+              <p class="content-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ea
+                in laborum quis sint voluptatum molestiae quibusdam libero
+              </p>
+            </div>
+          </li>
+          <li class="grid__column grid__column--size--1-of-4">
+            <div class="feature-card">
+              <i class="feature-card__icon icon-basic-heart"></i>
+              <h2 class="content-heading">Live a healthier life</h2>
+              <p class="content-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                ipsam neque dicta rerum ipsa similique. Fugit consectetur iste
+              </p>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
     <footer></footer>

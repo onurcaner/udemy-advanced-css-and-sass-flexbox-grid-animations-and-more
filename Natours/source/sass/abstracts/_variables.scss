@@ -30,12 +30,15 @@ $color--text--primary--safe-dark: color.change(
 
 /* Spacing */
 $length--horizontal-padding: 2rem;
-$length--max-width: 72rem - 2 * $length--horizontal-padding;
+$length--max-width: 88rem - 2 * $length--horizontal-padding;
+
+/* Border Radius */
+$border-radius: 0.125rem;
 
 /* Shadows */
-$shadow--xs: 0 0 0.5rem -0.1rem rgba($color--black, 0.08);
-$shadow--s: 0 0 0.8rem -0.16rem rgba($color--black, 0.1);
-$shadow--m: 0 0 1.25rem -0.25rem rgba($color--black, 0.12);
-$shadow--l: 0 0 2rem -0.4rem rgba($color--black, 0.14);
-$shadow--xl: 0 0 2.5rem -0.5rem rgba($color--black, 0.16);
-$shadow--xxl: 0 0 4rem -0.8rem rgba($color--black, 0.18);
+$shadow--xs: 0 0 0.5rem -0.1rem color.change($color--black, $alpha: 0.08);
+$shadow--s: 0 0 0.8rem -0.16rem color.change($color--black, $alpha: 0.1);
+$shadow--m: 0 0 1.25rem -0.25rem color.change($color--black, $alpha: 0.12);
+$shadow--l: 0 0 2rem -0.4rem color.change($color--black, $alpha: 0.14);
+$shadow--xl: 0 0 2.5rem -0.5rem color.change($color--black, $alpha: 0.16);
+$shadow--xxl: 0 0 4rem -0.8rem color.change($color--black, $alpha: 0.18);

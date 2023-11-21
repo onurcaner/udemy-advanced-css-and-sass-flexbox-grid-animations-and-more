@@ -1,3 +1,18 @@
-.hero {
+.hero-section {
   margin-bottom: 8rem;
+}
+
+.about-section {
+  @extend %section;
+  margin-bottom: 10rem;
+}
+
+.features-section-container {
+  position: relative;
+  @include section--background-image-gradient('../assets/images/nat-4.jpg');
+}
+
+.features-section {
+  @extend %position-absolute--center;
+  @extend %section;
 }

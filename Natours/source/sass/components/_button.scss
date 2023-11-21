@@ -8,7 +8,7 @@
   background-color: $color--primary;
   @extend %transition--fast;
   @extend %transition--hover-active-translate;
-  @extend %transition--hover-active-shadow--xs;
+  @extend %transition--hover-active-shadow--s;
 
   &::before {
     content: '';

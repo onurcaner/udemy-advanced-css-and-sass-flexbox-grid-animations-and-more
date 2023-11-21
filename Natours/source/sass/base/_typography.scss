@@ -5,15 +5,30 @@ body {
 
 %heading {
   font-weight: 700;
-  text-align: center;
   text-transform: uppercase;
+}
+
+%gradient-text {
+  background-color: $color--primary;
+  background-image: linear-gradient(
+    to right,
+    $color--primary--light,
+    $color--primary--dark
+  );
+  background-clip: text;
+  color: transparent;
 }
 
 @mixin hero-heading {
   @extend %heading;
   font-size: 3.4rem;
   letter-spacing: 1ch;
+  text-align: center;
   color: $color--white;
+
+  &--last-letter {
+    letter-spacing: 0ch;
+  }
 
   &--main,
   &--sub {
@@ -38,19 +53,13 @@ body {
   @extend %heading;
   font-size: 2rem;
   letter-spacing: 0.2ch;
-  background-image: linear-gradient(
-    to right,
-    $color--primary--light,
-    $color--primary--dark
-  );
-  background-clip: text;
-  color: transparent;
+  text-align: center;
+  @extend %gradient-text;
   margin-bottom: 4rem;
 }
 
 %content-heading {
   @extend %heading;
-  text-align: start;
   font-size: 1.125rem;
   margin-bottom: 1rem;
 }

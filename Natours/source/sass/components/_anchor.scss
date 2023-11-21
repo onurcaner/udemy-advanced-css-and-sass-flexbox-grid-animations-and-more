@@ -1,10 +1,11 @@
 .anchor {
   text-transform: capitalize;
   padding: 0.25em;
+  color: $color--text--primary;
   @extend %transition--fast;
   @extend %transition--hover-active-translate;
 
   &:hover {
-    color: $color--text--primary;
+    color: $color--text--primary--safe;
   }
 }
