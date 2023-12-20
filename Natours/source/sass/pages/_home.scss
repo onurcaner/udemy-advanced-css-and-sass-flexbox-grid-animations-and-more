@@ -4,17 +4,19 @@
 
 .about-section {
   @extend %section;
+
   margin-bottom: 10rem;
 }
 
 .features-section-container {
   position: relative;
-  @include section--background-image-gradient('../assets/images/nat-4.jpg');
+  @include section-background-image-gradient('../assets/images/nat-4.jpg');
+
   margin-bottom: 10rem;
 }
 
 .features-section {
-  @extend %position-absolute--center;
+  @extend %position-absolute-center;
   @extend %section;
 }
 

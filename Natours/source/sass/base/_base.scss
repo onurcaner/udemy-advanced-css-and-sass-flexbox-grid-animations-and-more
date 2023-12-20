@@ -5,18 +5,18 @@ html {
 }
 
 body {
-  background-color: $color--white;
+  background-color: $color-white;
 }
 
-@mixin section--background-image-gradient($image-path) {
+@mixin section-background-image-gradient($image-path) {
   height: 125vh;
   width: 100%;
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
-  background-color: $color--primary;
+  background-color: $color-primary;
   background-image: linear-gradient(
       to right bottom,
-      color.change($color--primary--light, $alpha: 0.8),
-      color.change($color--primary--dark, $alpha: 0.8)
+      color.change($color-primary--light, $alpha: 0.8),
+      color.change($color-primary--dark, $alpha: 0.8)
     ),
     url($image-path);
   background-size: cover;

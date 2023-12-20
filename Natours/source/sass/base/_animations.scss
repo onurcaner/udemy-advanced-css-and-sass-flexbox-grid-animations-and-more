@@ -4,19 +4,19 @@
   animation-fill-mode: backwards;
 }
 
-%transition--fast {
+%transition-speed-fast {
   transition: all 0.2s ease;
 }
 
-%transition--normal {
+%transition-speed-normal {
   transition: all 0.4s ease;
 }
 
-%transition--slow {
+%transition-speed-slow {
   transition: all 0.6s ease;
 }
 
-%transition--hover-active-translate {
+%transition-translate-on-hover-active {
   &:hover {
     translate: 0 -0.125rem;
   }
@@ -26,71 +26,76 @@
   }
 }
 
-%transition--hover-active-shadow--s {
-  box-shadow: $shadow--s;
+%transition-shadow-s-on-hover-active {
+  box-shadow: $shadow-s;
 
   &:hover {
-    box-shadow: $shadow--m;
+    box-shadow: $shadow-m;
   }
 
   &:active {
-    box-shadow: $shadow--xs;
+    box-shadow: $shadow-xs;
   }
 }
 
-%transition--hover-shadow--m {
-  box-shadow: $shadow--m;
+%transition-shadow-m-on-hover {
+  box-shadow: $shadow-m;
 
   &:hover {
-    box-shadow: $shadow--xl;
+    box-shadow: $shadow-xl;
   }
 }
 
-%transition--hover-translate {
+%transition-translate-on-hover {
   &:hover {
     translate: 0 -0.25rem;
   }
 }
 
-%transition--hover-scale {
+%transition-scale-on-hover {
   &:hover {
     scale: 1.02;
   }
 }
 
-@keyframes fade-in--to-left {
+@keyframes fade-in-to-left {
   0% {
     opacity: 0;
     translate: 4rem;
   }
+
   80% {
     translate: -0.125rem;
   }
+
   100% {
     opacity: 1;
     translate: 0;
   }
 }
 
-@keyframes fade-in--to-right {
+@keyframes fade-in-to-right {
   0% {
     opacity: 0;
     translate: -4rem;
   }
+
   80% {
     translate: 0.125rem;
   }
+
   100% {
     opacity: 1;
     translate: 0;
   }
 }
 
-@keyframes fade-in--to-up {
+@keyframes fade-in-to-up {
   0% {
     opacity: 0;
     translate: 0 2rem;
   }
+
   100% {
     opacity: 1;
     translate: 0;

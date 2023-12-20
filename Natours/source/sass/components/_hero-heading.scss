@@ -1,16 +1,15 @@
+/** @define hero-heading */
+
 .hero-heading {
   @include hero-heading;
 
-  &--main,
-  &--sub {
+  &--main {
+    animation-name: fade-in-to-right;
     @extend %fade-in;
   }
 
-  &--main {
-    animation-name: fade-in--to-right;
-  }
-
   &--sub {
-    animation-name: fade-in--to-left;
+    animation-name: fade-in-to-left;
+    @extend %fade-in;
   }
 }

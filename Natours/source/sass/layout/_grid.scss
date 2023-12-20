@@ -1,38 +1,56 @@
+/** @define grid */
+
 .grid {
-  $gap--column: 4rem;
-  $gap--row: 8rem;
+  $length-gap--column: 4rem;
+  $length-gap--row: 8rem;
+
   width: 100%;
 
   &__row {
     width: 100%;
     @include clear-fix;
-    @include row-gap($gap--row);
+    @include row-gap($length-gap--row);
   }
 
   &__column {
     float: left;
     width: 100%;
-    @include column-gap($gap--column);
+    @include column-gap($length-gap--column);
 
     &--size--1-of-2 {
-      width: calc((100% - 1 * #{$gap--column}) * (1 / 2) + 0 * #{$gap--column});
+      width: calc(
+        (100% - 1 * #{$length-gap--column}) * (1 / 2) + 0 * #{$length-gap--column}
+      );
     }
 
     &--size--1-of-3 {
-      width: calc((100% - 2 * #{$gap--column}) * (1 / 3) + 0 * #{$gap--column});
+      width: calc(
+        (100% - 2 * #{$length-gap--column}) * (1 / 3) + 0 * #{$length-gap--column}
+      );
     }
+
     &--size--2-of-3 {
-      width: calc((100% - 2 * #{$gap--column}) * (2 / 3) + 1 * #{$gap--column});
+      width: calc(
+        (100% - 2 * #{$length-gap--column}) * (2 / 3) + 1 * #{$length-gap--column}
+      );
     }
 
     &--size--1-of-4 {
-      width: calc((100% - 3 * #{$gap--column}) * (1 / 4) + 0 * #{$gap--column});
+      width: calc(
+        (100% - 3 * #{$length-gap--column}) * (1 / 4) + 0 * #{$length-gap--column}
+      );
     }
+
     &--size--2-of-4 {
-      width: calc((100% - 3 * #{$gap--column}) * (2 / 4) + 1 * #{$gap--column});
+      width: calc(
+        (100% - 3 * #{$length-gap--column}) * (2 / 4) + 1 * #{$length-gap--column}
+      );
     }
+
     &--size--3-of-4 {
-      width: calc((100% - 3 * #{$gap--column}) * (3 / 4) + 2 * #{$gap--column});
+      width: calc(
+        (100% - 3 * #{$length-gap--column}) * (3 / 4) + 2 * #{$length-gap--column}
+      );
     }
   }
 }

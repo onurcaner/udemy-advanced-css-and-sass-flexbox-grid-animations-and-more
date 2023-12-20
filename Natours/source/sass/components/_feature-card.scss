@@ -1,19 +1,22 @@
 @use 'sass:color';
 
+/** @define feature-card */
+
 .feature-card {
   text-align: center;
-  padding: $length--horizontal-padding;
+  padding: $length-horizontal-padding;
   border-radius: $border-radius;
-  background-color: color.change($color--white, $alpha: 0.8);
-  @extend %transition--fast;
-  @extend %transition--hover-translate;
-  @extend %transition--hover-scale;
-  @extend %transition--hover-shadow--m;
+  background-color: color.change($color-white, $alpha: 0.8);
+  @extend %transition-speed-fast;
+  @extend %transition-translate-on-hover;
+  @extend %transition-scale-on-hover;
+  @extend %transition-shadow-m-on-hover;
 
   &__icon {
     font-size: 4rem;
     display: inline-block;
     @extend %gradient-text;
+
     margin-bottom: 2rem;
   }
 }

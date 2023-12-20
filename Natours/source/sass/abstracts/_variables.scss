@@ -2,43 +2,43 @@
 @use 'sass:math';
 
 /* Given Colors */
-$color--primary--light: #7ed56f;
-$color--primary: #55c57a;
-$color--primary--dark: #28b485;
-$color--white: #fff;
-$color--grey: #808080;
-$color--black: #000;
+$color-primary--light: #7ed56f;
+$color-primary: #55c57a;
+$color-primary--dark: #28b485;
+$color-white: #fff;
+$color-grey: #808080;
+$color-black: #000;
 
 /* Text Color Grey */
-$color--text--dark: color.change($color--grey, $lightness: 25%);
-$color--text: color.change($color--grey, $lightness: 30%);
-$color--text--light: color.change($color--grey, $lightness: 35%);
-$color--text--lighter: color.change($color--grey, $lightness: 40%);
-$color--text--lightest: color.change($color--grey, $lightness: 45%);
+$color-text--dark: color.change($color-grey, $lightness: 25%);
+$color-text: color.change($color-grey, $lightness: 30%);
+$color-text--light: color.change($color-grey, $lightness: 35%);
+$color-text--lighter: color.change($color-grey, $lightness: 40%);
+$color-text--lightest: color.change($color-grey, $lightness: 45%);
 
 /* Text Color Main */
-$color--text--primary: color.change($color--primary, $lightness: 25%);
-$color--text--primary--safe: color.change($color--primary, $lightness: 35%);
-$color--text--primary--safe-light: color.change(
-  $color--primary--light,
+$color-text--primary: color.change($color-primary, $lightness: 25%);
+$color-text--primary--safe: color.change($color-primary, $lightness: 35%);
+$color-text--primary--safe--light: color.change(
+  $color-primary--light,
   $lightness: 34%
 );
-$color--text--primary--safe-dark: color.change(
-  $color--primary--dark,
+$color-text--primary--safe--dark: color.change(
+  $color-primary--dark,
   $lightness: 32%
 );
 
 /* Spacing */
-$length--horizontal-padding: 2rem;
-$length--max-width: 88rem - 2 * $length--horizontal-padding;
+$length-horizontal-padding: 2rem;
+$length-max-width: 88rem - 2 * $length-horizontal-padding;
 
 /* Border Radius */
 $border-radius: 0.125rem;
 
 /* Shadows */
-$shadow--xs: 0 0 0.5rem -0.1rem color.change($color--black, $alpha: 0.08);
-$shadow--s: 0 0 0.8rem -0.16rem color.change($color--black, $alpha: 0.1);
-$shadow--m: 0 0 1.25rem -0.25rem color.change($color--black, $alpha: 0.12);
-$shadow--l: 0 0 2rem -0.4rem color.change($color--black, $alpha: 0.14);
-$shadow--xl: 0 0 2.5rem -0.5rem color.change($color--black, $alpha: 0.16);
-$shadow--xxl: 0 0 4rem -0.8rem color.change($color--black, $alpha: 0.18);
+$shadow-xs: 0 0 0.5rem -0.1rem color.change($color-black, $alpha: 0.08);
+$shadow-s: 0 0 0.8rem -0.16rem color.change($color-black, $alpha: 0.1);
+$shadow-m: 0 0 1.25rem -0.25rem color.change($color-black, $alpha: 0.12);
+$shadow-l: 0 0 2rem -0.4rem color.change($color-black, $alpha: 0.14);
+$shadow-xl: 0 0 2.5rem -0.5rem color.change($color-black, $alpha: 0.16);
+$shadow-xxl: 0 0 4rem -0.8rem color.change($color-black, $alpha: 0.18);

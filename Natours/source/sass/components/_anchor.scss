@@ -1,11 +1,13 @@
+/** @define anchor */
+
 .anchor {
   text-transform: capitalize;
   padding: 0.25em;
-  color: $color--text--primary;
-  @extend %transition--fast;
-  @extend %transition--hover-active-translate;
+  color: $color-text--primary;
+  @extend %transition-speed-fast;
+  @extend %transition-translate-on-hover-active;
 
   &:hover {
-    color: $color--text--primary--safe;
+    color: $color-text--primary--safe;
   }
 }

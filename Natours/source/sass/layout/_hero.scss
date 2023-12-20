@@ -1,18 +1,22 @@
+/** @define hero  */
+
 .hero {
-  position: relative;
-  @include section--background-image-gradient('../assets/images/hero.jpg');
+  @include section-background-image-gradient('../assets/images/hero.jpg');
+
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: relative;
   background-position: top;
 
   &__logo {
     position: absolute;
-    top: $length--horizontal-padding;
-    left: $length--horizontal-padding;
+    top: $length-horizontal-padding;
+    left: $length-horizontal-padding;
     height: 2rem;
   }
 
   &__headline-and-button-container {
-    @extend %position-absolute--center;
+    @extend %position-absolute-center;
+
     top: 40%;
     text-align: center;
   }
@@ -21,7 +25,7 @@
     font-size: 1.125rem;
     padding: 1.5rem 3rem;
     animation-delay: 0.8s;
+    animation-name: fade-in-to-up;
     @extend %fade-in;
-    animation-name: fade-in--to-up;
   }
 }

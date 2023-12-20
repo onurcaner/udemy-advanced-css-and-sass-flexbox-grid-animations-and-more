@@ -1,14 +1,16 @@
+/** @define button  */
+
 .button {
   position: relative;
   text-transform: uppercase;
   padding: 1em 2em;
   border-bottom: unset;
   border-radius: 2em;
-  color: $color--white;
-  background-color: $color--primary;
-  @extend %transition--fast;
-  @extend %transition--hover-active-translate;
-  @extend %transition--hover-active-shadow--s;
+  color: $color-white;
+  background-color: $color-primary;
+  @extend %transition-speed-fast;
+  @extend %transition-translate-on-hover-active;
+  @extend %transition-shadow-s-on-hover-active;
 
   &::before {
     content: '';
@@ -18,7 +20,7 @@
     z-index: -1;
     background-color: inherit;
     border-radius: inherit;
-    @extend %transition--normal;
+    @extend %transition-speed-normal;
   }
 
   &:hover::before {
@@ -27,7 +29,7 @@
   }
 
   &--white {
-    color: $color--text--lightest;
-    background-color: $color--white;
+    color: $color-text--lightest;
+    background-color: $color-white;
   }
 }

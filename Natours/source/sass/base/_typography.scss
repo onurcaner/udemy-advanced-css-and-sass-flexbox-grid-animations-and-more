@@ -1,6 +1,6 @@
 body {
-  font-family: 'Lato', sans-serif;
-  color: $color--text;
+  font-family: Lato, sans-serif;
+  color: $color-text;
 }
 
 %heading {
@@ -9,11 +9,11 @@ body {
 }
 
 %gradient-text {
-  background-color: $color--primary;
+  background-color: $color-primary;
   background-image: linear-gradient(
     to right,
-    $color--primary--light,
-    $color--primary--dark
+    $color-primary--light,
+    $color-primary--dark
   );
   background-clip: text;
   color: transparent;
@@ -21,13 +21,14 @@ body {
 
 @mixin hero-heading {
   @extend %heading;
+
   font-size: 3.4rem;
   letter-spacing: 1ch;
   text-align: center;
-  color: $color--white;
+  color: $color-white;
 
   &--last-letter {
-    letter-spacing: 0ch;
+    letter-spacing: 0;
   }
 
   &--main,
@@ -51,15 +52,18 @@ body {
 
 %section-heading {
   @extend %heading;
+
   font-size: 2rem;
   letter-spacing: 0.2ch;
   text-align: center;
   @extend %gradient-text;
+
   margin-bottom: 4rem;
 }
 
 %content-heading {
   @extend %heading;
+
   font-size: 1.125rem;
   margin-bottom: 1rem;
 }
@@ -68,6 +72,6 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   max-width: 65ch;
-  color: $color--text--light;
+  color: $color-text--light;
   @include margin-bottom(2.25rem);
 }

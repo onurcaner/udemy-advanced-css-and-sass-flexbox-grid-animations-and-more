@@ -1,4 +1,4 @@
-%position-absolute--center {
+%position-absolute-center {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11,12 +11,13 @@
 }
 
 %horizontal-padding {
-  padding-left: $length--horizontal-padding;
-  padding-right: $length--horizontal-padding;
+  padding-left: $length-horizontal-padding;
+  padding-right: $length-horizontal-padding;
 }
 
 %section {
   @extend %horizontal-padding;
   @extend %margin-auto;
-  max-width: $length--max-width;
+
+  max-width: $length-max-width;
 }
