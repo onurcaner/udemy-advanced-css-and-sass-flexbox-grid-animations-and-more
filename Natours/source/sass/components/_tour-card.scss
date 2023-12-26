@@ -1,0 +1,161 @@
+@use 'sass:color';
+
+/** @define tour-card  */
+
+.tour-card {
+  /* funtionality and gerenal styling */
+  perspective: 64rem;
+  position: relative;
+
+  &,
+  &__front,
+  &__back {
+    min-height: 36rem;
+    width: 100%;
+    @extend %transition-speed-slow;
+  }
+
+  &__front,
+  &__back {
+    position: absolute;
+    backface-visibility: hidden;
+    text-align: center;
+    padding: $length-horizontal-padding;
+    border-radius: $border-radius;
+    overflow: hidden;
+    box-shadow: $shadow-m;
+  }
+
+  &__front {
+    padding: 0;
+    background-color: white;
+  }
+
+  &__back {
+    rotate: y 180deg;
+
+    &--primary {
+      background-color: $color-primary--light;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-primary--light,
+        $color-primary--dark
+      );
+    }
+
+    &--secondary {
+      background-color: $color-secondary--light;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-secondary--light,
+        $color-secondary--dark
+      );
+    }
+
+    &--tertiary {
+      background-color: $color-tertiary--light;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-tertiary--light,
+        $color-tertiary--dark
+      );
+    }
+  }
+
+  &:hover &__front,
+  &:hover &__back {
+    box-shadow: $shadow-l;
+  }
+
+  &:hover &__front {
+    rotate: y 180deg;
+  }
+
+  &:hover &__back {
+    rotate: y 360deg;
+  }
+
+  /* front face styling */
+  &__image {
+    height: 16rem;
+    background-blend-mode: screen;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+    &--primary {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary--light,
+          $color-primary--dark
+        ),
+        url('../assets/images/nat-6.jpg');
+    }
+
+    &--secondary {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary--light,
+          $color-secondary--dark
+        ),
+        url('../assets/images/nat-5.jpg');
+    }
+
+    &--tertiary {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary--light,
+          $color-tertiary--dark
+        ),
+        url('../assets/images/nat-7.jpg');
+    }
+  }
+
+  &__content-heading-container {
+    @extend %content-heading;
+
+    position: absolute;
+    top: 9rem;
+    right: 1rem;
+    text-align: right;
+  }
+
+  &__content-heading {
+    @include tour-card-heading;
+  }
+
+  &__properties {
+    padding: $length-horizontal-padding * 2;
+    padding-top: $length-horizontal-padding;
+
+    :not(:last-child) {
+      border-bottom: solid max(1px, 0.0625rem)
+        color.change($color: $color-grey, $lightness: 90%);
+    }
+  }
+
+  &__content-text {
+    @extend %content-text;
+
+    margin: 0.5rem 0;
+  }
+
+  /* back face styling */
+  &__price {
+    text-transform: uppercase;
+    margin-top: 6.8rem;
+    margin-bottom: 10rem;
+
+    :first-child,
+    :last-child {
+      color: $color-white;
+    }
+
+    :first-child {
+      @extend %content-text;
+    }
+
+    :last-child {
+      @extend %price-text;
+    }
+  }
+}

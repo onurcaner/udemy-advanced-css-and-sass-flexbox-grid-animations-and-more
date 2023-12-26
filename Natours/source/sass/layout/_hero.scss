@@ -11,7 +11,7 @@
     position: absolute;
     top: $length-horizontal-padding;
     left: $length-horizontal-padding;
-    height: 2rem;
+    height: 2.5rem;
   }
 
   &__headline-and-button-container {
@@ -24,6 +24,7 @@
   .button--hero {
     font-size: 1.125rem;
     padding: 1.5rem 3rem;
+    color: $color-text--lightest;
     animation-delay: 0.8s;
     animation-name: fade-in-to-up;
     @extend %fade-in;

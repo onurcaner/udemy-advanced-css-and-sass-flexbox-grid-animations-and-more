@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
       rel="stylesheet"
     />
     <!-- Linea Iconfont -->
@@ -24,7 +24,11 @@
   </head>
   <body>
     <!-- Hero Section -->
-    <header class="hero-section hero">
+    <header
+      class="hero-section hero"
+      role="img"
+      aria-label="Woman doing yoga on top of a rock extending towards valley"
+    >
       <img
         class="hero__logo"
         src="./source/assets/images/logo-white.png"
@@ -116,7 +120,11 @@
         </div>
       </section>
       <!-- Features Section -->
-      <section class="grid features-section-container">
+      <section
+        class="grid features-section-container"
+        role="img"
+        aria-label="A valley with snowy mountais and trees"
+      >
         <!-- No h2 -->
         <ul class="grid__row features-section">
           <li class="grid__column grid__column--size--1-of-4">
@@ -166,11 +174,150 @@
         <h2 class="section-heading">Most Popular Tours</h2>
         <div class="grid">
           <ul class="grid__row">
-            <li class="grid__column grid__column--size--1-of-3 tour-card"></li>
-            <li class="grid__column grid__column--size--1-of-3 tour-card"></li>
-            <li class="grid__column grid__column--size--1-of-3 tour-card"></li>
+            <li
+              class="tour-card tour-card--secondary grid__column grid__column--size--1-of-3"
+            >
+              <div class="tour-card__front">
+                <div
+                  class="tour-card__image tour-card__image--secondary"
+                  role="img"
+                  aria-label="Man standing on a stone bridge created by sea waves"
+                ></div>
+                <h3 class="tour-card__content-heading-container">
+                  <span
+                    class="tour-card__content-heading tour-card__content-heading--secondary"
+                  >
+                    The Sea
+                  </span>
+                  <br />
+                  <span
+                    class="tour-card__content-heading tour-card__content-heading--secondary"
+                  >
+                    Explorer
+                  </span>
+                </h3>
+                <ul class="tour-card__properties">
+                  <li><p class="tour-card__content-text">3 day tours</p></li>
+                  <li>
+                    <p class="tour-card__content-text">Up to 30 people</p>
+                  </li>
+                  <li><p class="tour-card__content-text">2 tour guides</p></li>
+                  <li>
+                    <p class="tour-card__content-text">Sleep in cozy hotels</p>
+                  </li>
+                  <li>
+                    <p class="tour-card__content-text">Difficulty: Easy</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="tour-card__back tour-card__back--secondary">
+                <p class="tour-card__price">
+                  <span>only</span>
+                  <br />
+                  <span>$297</span>
+                </p>
+                <a class="button button--white" href="#"> Book Now! </a>
+              </div>
+            </li>
+
+            <li
+              class="tour-card tour-card--primary grid__column grid__column--size--1-of-3"
+            >
+              <div class="tour-card__front">
+                <div
+                  class="tour-card__image tour-card__image--primary"
+                  role="img"
+                  aria-label="Man standing on a stone bridge created by sea waves"
+                ></div>
+                <h3 class="tour-card__content-heading-container">
+                  <span
+                    class="tour-card__content-heading tour-card__content-heading--primary"
+                  >
+                    The Forest
+                  </span>
+                  <br />
+                  <span
+                    class="tour-card__content-heading tour-card__content-heading--primary"
+                  >
+                    Hiker
+                  </span>
+                </h3>
+                <ul class="tour-card__properties">
+                  <li><p class="tour-card__content-text">7 day tours</p></li>
+                  <li>
+                    <p class="tour-card__content-text">Up to 40 people</p>
+                  </li>
+                  <li><p class="tour-card__content-text">6 tour guides</p></li>
+                  <li>
+                    <p class="tour-card__content-text">
+                      Sleep in provided tents
+                    </p>
+                  </li>
+                  <li>
+                    <p class="tour-card__content-text">Difficulty: Medium</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="tour-card__back tour-card__back--primary">
+                <p class="tour-card__price">
+                  <span>only</span>
+                  <br />
+                  <span>$497</span>
+                </p>
+                <a class="button button--white" href="#"> Book Now! </a>
+              </div>
+            </li>
+
+            <li
+              class="tour-card tour-card--tertiary grid__column grid__column--size--1-of-3"
+            >
+              <div class="tour-card__front">
+                <div
+                  class="tour-card__image tour-card__image--tertiary"
+                  role="img"
+                  aria-label="Man standing on a stone bridge created by sea waves"
+                ></div>
+                <h3 class="tour-card__content-heading-container">
+                  <span
+                    class="tour-card__content-heading tour-card__content-heading--tertiary"
+                  >
+                    The Snow
+                  </span>
+                  <br />
+                  <span
+                    class="tour-card__content-heading tour-card__content-heading--tertiary"
+                  >
+                    Adventurer
+                  </span>
+                </h3>
+                <ul class="tour-card__properties">
+                  <li><p class="tour-card__content-text">5 day tours</p></li>
+                  <li>
+                    <p class="tour-card__content-text">Up to 15 people</p>
+                  </li>
+                  <li><p class="tour-card__content-text">3 tour guides</p></li>
+                  <li>
+                    <p class="tour-card__content-text">
+                      Sleep in provided tents
+                    </p>
+                  </li>
+                  <li>
+                    <p class="tour-card__content-text">Difficulty: Hard</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="tour-card__back tour-card__back--tertiary">
+                <p class="tour-card__price">
+                  <span>only</span>
+                  <br />
+                  <span>$897</span>
+                </p>
+                <a class="button button--white" href="#"> Book Now! </a>
+              </div>
+            </li>
           </ul>
         </div>
+        <a class="button" href="#">Discover All Tours</a>
       </section>
     </main>
     <footer></footer>

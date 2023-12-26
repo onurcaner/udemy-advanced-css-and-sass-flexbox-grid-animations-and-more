@@ -22,4 +22,12 @@
 
 .tours-section {
   @extend %section;
+
+  text-align: center;
+
+  .tour-card {
+    margin-bottom: 3.4rem;
+  }
+
+  margin-bottom: 12rem;
 }

@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 body {
   font-family: Lato, sans-serif;
   color: $color-text;
@@ -53,8 +55,8 @@ body {
 %section-heading {
   @extend %heading;
 
-  font-size: 2rem;
-  letter-spacing: 0.2ch;
+  font-size: 2.25rem;
+  letter-spacing: 0.1ch;
   text-align: center;
   @extend %gradient-text;
 
@@ -74,4 +76,44 @@ body {
   max-width: 65ch;
   color: $color-text--light;
   @include margin-bottom(2.25rem);
+}
+
+%price-text {
+  font-size: 5rem;
+  letter-spacing: -0.15ch;
+  font-weight: 100;
+}
+
+@mixin tour-card-heading {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  margin-bottom: -0.25rem;
+  color: $color-white;
+
+  &--primary {
+    background-image: linear-gradient(
+      to right bottom,
+      color.change($color-primary--light, $alpha: 0.8),
+      color.change($color-primary--dark, $alpha: 0.8)
+    );
+  }
+
+  &--secondary {
+    background-image: linear-gradient(
+      to right bottom,
+      color.change($color-secondary--light, $alpha: 0.8),
+      color.change($color-secondary--dark, $alpha: 0.8)
+    );
+  }
+
+  &--tertiary {
+    background-image: linear-gradient(
+      to right bottom,
+      color.change($color-tertiary--light, $alpha: 0.8),
+      color.change($color-tertiary--dark, $alpha: 0.8)
+    );
+  }
 }
