@@ -1,6 +1,7 @@
 @use 'sass:color';
 
 html {
+  /* font-size: 1rem; */
   font-size: clamp(87.5%, 87.5% + 0.25vw, 125%);
 }
 
@@ -11,7 +12,8 @@ body {
 @mixin section-background-image-gradient($image-path) {
   height: 125vh;
   width: 100%;
-  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  @include clip-path;
+
   background-color: $color-primary;
   background-image: linear-gradient(
       to right bottom,

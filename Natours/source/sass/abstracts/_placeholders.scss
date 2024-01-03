@@ -21,3 +21,10 @@
 
   max-width: $length-max-width;
 }
+
+%card {
+  padding: $length-horizontal-padding;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $shadow-m;
+}

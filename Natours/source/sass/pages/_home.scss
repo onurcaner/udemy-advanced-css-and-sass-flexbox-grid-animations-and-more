@@ -31,3 +31,17 @@
 
   margin-bottom: 12rem;
 }
+
+.stories-section-container {
+  background-color: whitesmoke;
+}
+
+.stories-section {
+  @extend %section;
+
+  margin-bottom: 12rem;
+
+  .anchor {
+    @extend %margin-auto;
+  }
+}

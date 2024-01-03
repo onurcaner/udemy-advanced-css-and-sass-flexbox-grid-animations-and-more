@@ -7,14 +7,13 @@
   "rules": {
     "plugin/selector-bem-pattern": {
       "preset": "bem",
-      "componentName": "([a-z][a-z0-9]+)(-[a-z0-9]+)*",
+      "componentName": "^([a-z][a-z0-9]+)(-[a-z0-9]+)*$",
       "componentSelectors": {
         "initial": ".{componentName}(-[a-z]+)*",
         "combined": ".{componentName}(__[a-z]+)*(--[a-z0-9]+)*"
-      },
-      "utilitySelectors": "^\\.util-[a-z]+$"
+      }
     },
-    "selector-class-pattern": ".([a-z][a-z0-9]+)([_-]{1,2}[a-z0-9]+)*",
+    "selector-class-pattern": "^.([a-z][a-z0-9]+)([_-]{1,2}[a-z0-9]+)*$",
     "scss/dollar-variable-pattern": [
       "^(-?-?[a-z][a-z0-9]+)(--?[a-z0-9]+)*$",
       {

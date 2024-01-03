@@ -20,10 +20,7 @@
     position: absolute;
     backface-visibility: hidden;
     text-align: center;
-    padding: $length-horizontal-padding;
-    border-radius: $border-radius;
-    overflow: hidden;
-    box-shadow: $shadow-m;
+    @extend %card;
   }
 
   &__front {
