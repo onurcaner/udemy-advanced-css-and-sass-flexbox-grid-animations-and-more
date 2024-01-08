@@ -320,10 +320,23 @@
         <a class="button" href="#">Discover All Tours</a>
       </section>
       <!-- Stories Section -->
-      <div class="stories-section-container">
-        <section class="stories-section">
+      <section class="stories-section-container">
+        <video
+          class="background-video background-video--filtered"
+          width="1920"
+          height="1080"
+          autoplay
+          muted
+          loop
+        >
+          <source src="./source/assets/videos/video.mp4" type="video/mp4" />
+          <source src="./source/assets/videos/video.webm" type="video/webm" />
+          Your browser doesn't support videos
+        </video>
+
+        <div class="stories-section">
           <h2 class="section-heading">We Make People Genuinely Happy</h2>
-          <ul>
+          <ul class="story-cards">
             <li class="story-card">
               <div class="story-card__contents">
                 <figure class="story-card__image-container">
@@ -351,10 +364,38 @@
                 </div>
               </div>
             </li>
+
+            <li class="story-card">
+              <div class="story-card__contents">
+                <figure class="story-card__image-container">
+                  <img
+                    class="story-card__image"
+                    src="./source/assets/images/nat-9.jpg"
+                    alt="Man standing on top of a mountain"
+                    width="2000"
+                    height="1333"
+                  />
+                  <figcaption class="story-card__image-caption">
+                    Jack Wilson
+                  </figcaption>
+                </figure>
+                <div class="story-card__text-container">
+                  <h3 class="content-heading">
+                    My life is completely different now
+                  </h3>
+                  <p class="content-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolore neque omnis maxime, nulla nostrum explicabo nihil,
+                    blanditiis dolorum a praesentium, itaque corrupti labore
+                    tempora maiores. Exercitationem eum itaque atque alias!
+                  </p>
+                </div>
+              </div>
+            </li>
           </ul>
           <a href="#" class="anchor">Read all stories &rarr;</a>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
   </body>

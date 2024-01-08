@@ -33,15 +33,21 @@
 }
 
 .stories-section-container {
-  background-color: whitesmoke;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .stories-section {
   @extend %section;
 
-  margin-bottom: 12rem;
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  text-align: center;
 
   .anchor {
     @extend %margin-auto;
+
+    margin-top: 6rem;
   }
 }

@@ -1,17 +1,26 @@
+@use 'sass:color';
+
 /** @define story-card  */
 
 .story-card {
-  @extend %margin-auto;
-  @extend %card;
-  @include clip-path-inverted;
-  @include clear-fix;
+  @include margin-bottom(5rem);
 
-  background-color: violet;
-  width: calc(100% / 1.5);
-  padding: $length-horizontal-padding * 2
-    calc($length-horizontal-padding * 1.5 + calc(10% / 1.5));
+  filter: drop-shadow($shadow-m--filter);
+  text-align: start;
+
+  &__contents {
+    @extend %card;
+    @extend %margin-auto;
+    @include clip-path-inverted;
+
+    width: calc(100% / 1.5);
+    background-color: color.change($color-white, $alpha: 0.8);
+    padding: $length-horizontal-padding * 2
+      calc($length-horizontal-padding * 1.5 + calc(10% / 1.5));
+  }
 
   &__image-container {
+    position: relative;
     translate: $length-horizontal-padding * -0.5;
     float: left;
     shape-outside: circle(50% at 50% 50%);
@@ -21,11 +30,36 @@
     overflow: hidden;
   }
 
+  &__image,
+  &__image-caption {
+    @extend %transition-speed-normal;
+  }
+
   &__image {
     height: 100%;
+    translate: -16.666%;
+    scale: 1.25;
+  }
+
+  &:hover &__image {
+    scale: 1.2;
+    filter: blur(5px) brightness(80%);
   }
 
   &__image-caption {
+    @extend %position-absolute-center;
+    @extend %content-text;
+
+    text-wrap: nowrap;
+    text-transform: uppercase;
+    color: $color-white;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  &:hover &__image-caption {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   &__text-container {

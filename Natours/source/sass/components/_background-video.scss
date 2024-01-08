@@ -1,0 +1,13 @@
+/** @define background-video  */
+
+.background-video {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+  &--filtered {
+    filter: blur(2px) opacity(25%);
+  }
+}

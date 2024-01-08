@@ -6,7 +6,7 @@
   text-align: center;
   background-color: color.change($color-white, $alpha: 0.8);
   @extend %card;
-  @extend %transition-speed-fast;
+  @extend %transition-speed-normal;
   @extend %transition-translate-on-hover;
   @extend %transition-scale-on-hover;
   @extend %transition-shadow-m-on-hover;
