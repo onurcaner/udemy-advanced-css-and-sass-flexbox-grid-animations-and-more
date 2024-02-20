@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 .hero-section {
   margin-bottom: 8rem;
 }
@@ -50,4 +52,38 @@
 
     margin-top: 6rem;
   }
+}
+
+.booking-section-container {
+  @include background-gradient;
+
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+.booking-section {
+  @extend %section;
+  @extend %card;
+  @include background-image('../assets/images/nat-10.jpg');
+
+  background-image: linear-gradient(
+      105deg,
+      color.change($color-white, $alpha: 0.8) 0%,
+      color.change($color-white, $alpha: 0.8) 50%,
+      transparent 50%,
+      transparent 100%
+    ),
+    url('../assets/images/nat-10.jpg');
+
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+
+  .form {
+    width: 80%;
+  }
+
+  /* .button {
+    font-size: 1rem;
+  } */
 }

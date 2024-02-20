@@ -11,7 +11,6 @@ body {
 
 @mixin section-background-image-gradient($image-path) {
   height: 125vh;
-  width: 100%;
   @include clip-path;
 
   background-color: $color-primary;
@@ -21,6 +20,22 @@ body {
       color.change($color-primary--dark, $alpha: 0.8)
     ),
     url($image-path);
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin background-gradient() {
+  background-color: $color-primary;
+  background-image: linear-gradient(
+    to right bottom,
+    color.change($color-primary--light, $alpha: 0.8),
+    color.change($color-primary--dark, $alpha: 0.8)
+  );
+}
+
+@mixin background-image($image-path) {
+  background-color: $color-primary;
+  background-image: url($image-path);
   background-size: cover;
   background-position: center;
 }

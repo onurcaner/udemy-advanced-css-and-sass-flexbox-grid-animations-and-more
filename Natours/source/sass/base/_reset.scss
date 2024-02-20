@@ -24,6 +24,13 @@ a {
   color: inherit;
 }
 
+button {
+  font-size: inherit;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
 img {
   height: auto;
   width: auto;
@@ -36,4 +43,16 @@ video {
 
 ul {
   list-style-type: none;
+}
+
+input {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  line-height: inherit;
+  border: none;
+  padding: 0;
+  color: inherit;
 }

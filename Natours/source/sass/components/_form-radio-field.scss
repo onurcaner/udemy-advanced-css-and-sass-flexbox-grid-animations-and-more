@@ -1,0 +1,58 @@
+@use 'sass:color';
+
+/** @define form-radio-field */
+
+.form-radio-field {
+  @extend %content-text;
+
+  margin-top: 1.5rem;
+
+  &__label,
+  &__input,
+  &__button,
+  &__button::after {
+    @extend %transition-speed-fast;
+
+    display: inline-block;
+  }
+
+  &__label {
+    @extend %form-placeholder-text;
+
+    padding-left: 2.5em;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__button {
+    @extend %position-absolute-center;
+
+    font-size: 2em;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    border: solid 0.3125rem $color-primary;
+    left: 0;
+    translate: 0 -50%;
+
+    &::after {
+      @extend %position-absolute-center;
+
+      content: '';
+      font-size: 0.5em;
+      height: 1em;
+      width: 1em;
+      border-radius: 50%;
+      background-color: $color-primary;
+      opacity: 0;
+    }
+  }
+
+  &:has(&__input:checked) &__button::after {
+    opacity: 1;
+  }
+}

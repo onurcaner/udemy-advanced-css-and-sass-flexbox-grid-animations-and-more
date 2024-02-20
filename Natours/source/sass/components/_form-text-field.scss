@@ -1,0 +1,51 @@
+@use 'sass:color';
+
+/** @define form-text-field */
+
+.form-text-field {
+  $input-padding-left: 1rem;
+
+  @extend %content-text;
+  @include margin-bottom(1.5rem);
+
+  position: relative;
+
+  &__label,
+  &__input {
+    @extend %transition-speed-fast;
+
+    display: block;
+  }
+
+  &__label {
+    @extend %form-label-text;
+
+    translate: 0 0;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.5rem $input-padding-left;
+    border-radius: $border-radius;
+    box-shadow: $shadow-xs;
+    background-color: color.change($color-white, $alpha: 0.8);
+    border-top: solid max(4px, 0.25rem) transparent;
+    border-bottom: solid max(4px, 0.25rem) transparent;
+
+    &:focus-visible {
+      outline: none;
+      border-bottom: solid max(4px, 0.25rem) $color-primary;
+    }
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &:has(&__input:placeholder-shown) &__label {
+    @extend %form-placeholder-text;
+
+    color: $color-text--lightest;
+    translate: $input-padding-left 2.5rem;
+  }
+}
