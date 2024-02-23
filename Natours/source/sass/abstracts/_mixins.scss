@@ -28,6 +28,12 @@
   }
 }
 
+@mixin margin-right($margin) {
+  &:not(:last-child) {
+    margin-right: $margin;
+  }
+}
+
 @mixin clip-path {
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
 }

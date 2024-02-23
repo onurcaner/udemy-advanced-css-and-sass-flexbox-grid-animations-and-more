@@ -45,7 +45,8 @@
   &:has(&__input:placeholder-shown) &__label {
     @extend %form-placeholder-text;
 
-    color: $color-text--lightest;
     translate: $input-padding-left 2.5rem;
+    color: $color-text--lightest;
+    cursor: text;
   }
 }

@@ -1,0 +1,59 @@
+@use 'sass:color';
+
+/** @define footer */
+
+.footer {
+  padding-left: $length-horizontal-padding;
+  padding-right: $length-horizontal-padding;
+  background-color: color.change($color-grey, $lightness: 20%);
+  color: color.change($color-grey, $lightness: 85%);
+
+  &__logo {
+    @extend %margin-auto;
+
+    display: block;
+    width: 8rem;
+  }
+
+  &__line {
+    border-top: solid max(0.0625rem, 1px) $color-grey;
+  }
+
+  &__navigation,
+  &__description-container {
+    padding-top: 0.75rem;
+  }
+
+  &__navigation {
+    display: inline-block;
+  }
+
+  &__link-container {
+    display: inline-block;
+    @include margin-right(1.5rem);
+  }
+
+  .anchor--footer {
+    @extend %small-text;
+
+    text-transform: uppercase;
+    border-bottom: unset;
+    color: inherit;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__description-container {
+    position: relative;
+  }
+
+  .content-text--footer {
+    @extend %content-text-small;
+
+    position: absolute;
+    right: 0;
+    color: inherit;
+  }
+}
