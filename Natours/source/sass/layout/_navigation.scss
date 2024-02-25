@@ -1,0 +1,105 @@
+/** @define navigation  */
+
+@mixin navigation-position {
+  position: fixed;
+  top: $length-horizontal-padding;
+  right: $length-horizontal-padding;
+  z-index: 10;
+}
+
+.navigation {
+  @include navigation-position;
+
+  &__label,
+  &::after {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: $shadow-l;
+  }
+
+  &__label {
+    @include navigation-position;
+
+    text-align: center;
+    text-justify: center;
+    z-index: 11;
+    height: 4rem;
+    background-color: $color-white;
+    box-shadow: $shadow-l;
+    cursor: pointer;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__list {
+    @extend %position-absolute-center;
+    @extend %transition-speed-slow;
+
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    z-index: 11;
+    translate: -50% -60%;
+    text-align: center;
+  }
+
+  &__anchor-container {
+    @include margin-bottom(1rem);
+  }
+
+  .anchor--navigation {
+    @extend %transition-speed-fast;
+    @extend %navigation-anchor-text;
+
+    position: relative;
+    padding: 1rem 2rem;
+    border: unset;
+    border-radius: $border-radius;
+    color: $color-white;
+    background-image: linear-gradient(
+      to bottom,
+      $color-white 0%,
+      $color-white 50%,
+      transparent 50%,
+      transparent 100%
+    );
+    background-size: 101% 202%;
+    background-position: bottom;
+
+    &:hover {
+      background-position: top;
+      color: $color-text--primary--safe;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    @extend %transition-speed-slow;
+    @include navigation-position;
+
+    position: relative;
+    height: 0;
+    translate: 50% -50%;
+    background-image: radial-gradient(
+      $color-primary--light,
+      $color-primary--dark
+    );
+  }
+
+  &:has(input:checked) {
+    &::after {
+      height: max(250vw, 250vh);
+    }
+
+    .navigation {
+      &__list {
+        visibility: visible;
+        opacity: 1;
+        translate: -50% -50%;
+      }
+    }
+  }
+}

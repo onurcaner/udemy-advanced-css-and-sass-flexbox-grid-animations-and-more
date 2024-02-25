@@ -23,6 +23,36 @@
     <link rel="stylesheet" href="./source/sass/main.scss" />
   </head>
   <body>
+    <!-- Navigation -->
+    <div class="navigation">
+      <label class="navigation__label" for="is-navigation-open">NAV</label>
+      <input
+        type="checkbox"
+        class="navigation__input"
+        name="is-navigation-open"
+        id="is-navigation-open"
+      />
+
+      <nav>
+        <ul class="navigation__list">
+          <li class="navigation__anchor-container">
+            <a class="anchor anchor--navigation" href="#">About Natours</a>
+          </li>
+          <li class="navigation__anchor-container">
+            <a class="anchor anchor--navigation" href="#">Your benefits</a>
+          </li>
+          <li class="navigation__anchor-container">
+            <a class="anchor anchor--navigation" href="#">Popular tours</a>
+          </li>
+          <li class="navigation__anchor-container">
+            <a class="anchor anchor--navigation" href="#">Stories</a>
+          </li>
+          <li class="navigation__anchor-container">
+            <a class="anchor anchor--navigation" href="#">Book now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <!-- Hero Section -->
     <header
       class="hero-section hero"
@@ -36,7 +66,6 @@
         width="195"
         height="100"
       />
-      <!-- nav here in the future -->
       <div class="hero__headline-and-button-container">
         <h1 class="hero-heading">
           <span class="hero-heading--main"

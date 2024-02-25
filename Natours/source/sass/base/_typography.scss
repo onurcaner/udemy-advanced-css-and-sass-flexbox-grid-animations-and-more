@@ -21,6 +21,13 @@ body {
   color: transparent;
 }
 
+%navigation-anchor-text {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.6rem;
+  letter-spacing: 0.05ch;
+}
+
 @mixin hero-heading {
   @extend %heading;
 
