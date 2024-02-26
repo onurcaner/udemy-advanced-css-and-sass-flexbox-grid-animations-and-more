@@ -25,7 +25,12 @@
   <body>
     <!-- Navigation -->
     <div class="navigation">
-      <label class="navigation__label" for="is-navigation-open">NAV</label>
+      <label
+        class="navigation__label"
+        aria-label="Open or close navigation"
+        for="is-navigation-open"
+        ><span class="navigation__icon">&nbsp;</span></label
+      >
       <input
         type="checkbox"
         class="navigation__input"
@@ -36,22 +41,68 @@
       <nav>
         <ul class="navigation__list">
           <li class="navigation__anchor-container">
-            <a class="anchor anchor--navigation" href="#">About Natours</a>
+            <a class="anchor anchor--navigation" href="#about-section"
+              >About Natours</a
+            >
           </li>
           <li class="navigation__anchor-container">
-            <a class="anchor anchor--navigation" href="#">Your benefits</a>
+            <a class="anchor anchor--navigation" href="#features-section"
+              >Your benefits</a
+            >
           </li>
           <li class="navigation__anchor-container">
-            <a class="anchor anchor--navigation" href="#">Popular tours</a>
+            <a class="anchor anchor--navigation" href="#tours-section"
+              >Popular tours</a
+            >
           </li>
           <li class="navigation__anchor-container">
-            <a class="anchor anchor--navigation" href="#">Stories</a>
+            <a class="anchor anchor--navigation" href="#stories-section"
+              >Stories</a
+            >
           </li>
           <li class="navigation__anchor-container">
-            <a class="anchor anchor--navigation" href="#">Book now</a>
+            <a class="anchor anchor--navigation" href="#booking-section"
+              >Book now</a
+            >
           </li>
         </ul>
       </nav>
+    </div>
+    <!-- Popup -->
+    <div class="popup" id="popup">
+      <div class="popup__box">
+        <div class="popup__image-container">
+          <img
+            class="popup__image"
+            alt="Tour image"
+            src="./source/assets/images/nat-5.jpg"
+          />
+          <img
+            class="popup__image"
+            alt="Tour image"
+            src="./source/assets/images/nat-9.jpg"
+          />
+        </div>
+        <div class="popup__text-container">
+          <a
+            class="popup__close-button"
+            href="#tours-section"
+            aria-label="Close popup"
+            >X</a
+          >
+          <h2 class="section-heading section-heading--popup">
+            Start Booking Now
+          </h2>
+          <h3 class="content-heading">Embark on a journey into the wild</h3>
+          <p class="content-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus id atque fugiat cupiditate eveniet recusandae? Rerum
+            magnam numquam saepe? Expedita, temporibus quas. Consequatur
+            perspiciatis inventore iusto dolores, vero provident placeat.
+          </p>
+          <button class="button">Book Now</button>
+        </div>
+      </div>
     </div>
     <!-- Hero Section -->
     <header
@@ -76,14 +127,14 @@
             ></span
           >
         </h1>
-        <a class="button button--white button--hero" href="#"
+        <a class="button button--white button--hero" href="#tours-section"
           >Discover Our Tours</a
         >
       </div>
     </header>
     <main>
       <!-- About Section -->
-      <section class="about-section">
+      <section class="about-section" id="about-section">
         <h2 class="section-heading">Exciting Tours For Adventurous People</h2>
         <div class="grid">
           <div class="grid__row">
@@ -155,7 +206,7 @@
         aria-label="A valley with snowy mountais and trees"
       >
         <!-- No h2 -->
-        <ul class="grid__row features-section">
+        <ul class="grid__row features-section" id="features-section">
           <li class="grid__column grid__column--size--1-of-4">
             <div class="feature-card">
               <i class="feature-card__icon icon-basic-world"></i>
@@ -199,7 +250,7 @@
         </ul>
       </section>
       <!-- Tours Section -->
-      <section class="tours-section">
+      <section class="tours-section" id="tours-section">
         <h2 class="section-heading">Most Popular Tours</h2>
         <div class="grid">
           <ul class="grid__row">
@@ -245,7 +296,7 @@
                   <br />
                   <span>$297</span>
                 </p>
-                <a class="button button--white" href="#"> Book Now! </a>
+                <a class="button button--white" href="#popup"> Book Now! </a>
               </div>
             </li>
 
@@ -293,7 +344,7 @@
                   <br />
                   <span>$497</span>
                 </p>
-                <a class="button button--white" href="#"> Book Now! </a>
+                <a class="button button--white" href="#popup"> Book Now! </a>
               </div>
             </li>
 
@@ -341,7 +392,7 @@
                   <br />
                   <span>$897</span>
                 </p>
-                <a class="button button--white" href="#"> Book Now! </a>
+                <a class="button button--white" href="#popup"> Book Now! </a>
               </div>
             </li>
           </ul>
@@ -363,7 +414,7 @@
           Your browser doesn't support videos
         </video>
 
-        <div class="stories-section">
+        <div class="stories-section" id="stories-section">
           <h2 class="section-heading">We Make People Genuinely Happy</h2>
           <ul class="story-cards">
             <li class="story-card">
@@ -429,6 +480,7 @@
       <section class="grid booking-section-container">
         <div
           class="grid__row booking-section"
+          id="booking-section"
           role="img"
           aria-label="Moutain filled with forest near to a beautufil sea"
         >

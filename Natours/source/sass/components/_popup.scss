@@ -1,0 +1,92 @@
+@use 'sass:color';
+
+/** @define popup  */
+.popup {
+  visibility: hidden;
+
+  &__box {
+    @extend %position-absolute-center;
+    @extend %transition-speed-slow;
+
+    position: fixed;
+    display: block;
+    width: min(90vw, $length-max-width);
+    max-height: 90vh;
+    z-index: 101;
+    border-radius: $border-radius;
+    background-color: $color-white;
+    box-shadow: $shadow-m;
+    overflow: hidden;
+    opacity: 0;
+    scale: 0;
+  }
+
+  &__image-container,
+  &__text-container {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  &__image-container {
+    width: 33.3333%;
+    height: 50%;
+    overflow: hidden;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+  &__text-container {
+    text-align: start;
+    width: 66.6667%;
+    padding: $length-horizontal-padding * 2;
+  }
+
+  &__close-button {
+    @extend %transition-speed-fast;
+
+    font-size: 1.25rem;
+    position: absolute;
+    top: $length-horizontal-padding;
+    right: $length-horizontal-padding;
+    border: none;
+
+    &:hover {
+      color: $color-text--primary--safe;
+    }
+  }
+
+  .section-heading--popup {
+    text-align: start;
+  }
+
+  &::after {
+    @extend %transition-speed-slow;
+
+    content: '';
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: color.change($color-black, $alpha: 0.25);
+    opacity: 0;
+    backdrop-filter: blur(0);
+  }
+
+  &:target {
+    visibility: visible;
+
+    .popup__box {
+      opacity: 1;
+      scale: 1;
+    }
+
+    &::after {
+      opacity: 1;
+      backdrop-filter: blur(16px);
+    }
+  }
+}

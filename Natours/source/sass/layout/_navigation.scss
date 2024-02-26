@@ -29,6 +29,39 @@
     cursor: pointer;
   }
 
+  &__icon::before,
+  &__icon::after {
+    content: '';
+  }
+
+  &__icon::before,
+  &__icon,
+  &__icon::after {
+    @extend %position-absolute-center;
+    @extend %transition-speed-fast;
+
+    display: inline-block;
+    width: 2rem;
+    height: max(0.125rem, 2px);
+    background-color: $color-text--lighter;
+  }
+
+  &__icon::before {
+    translate: -50% -450%;
+  }
+
+  &__label:hover &__icon::before {
+    translate: -50% -500%;
+  }
+
+  &__icon::after {
+    translate: -50% 350%;
+  }
+
+  &__label:hover &__icon::after {
+    translate: -50% 400%;
+  }
+
   &__input {
     display: none;
   }
@@ -75,6 +108,7 @@
   }
 
   &::after {
+    /* Background */
     content: '';
     display: inline-block;
     @extend %transition-speed-slow;
@@ -95,6 +129,23 @@
     }
 
     .navigation {
+      &__icon {
+        width: 0;
+      }
+
+      &__icon::before,
+      &__icon::after {
+        translate: -50% -50%;
+      }
+
+      &__icon::before {
+        rotate: 135deg;
+      }
+
+      &__icon::after {
+        rotate: -135deg;
+      }
+
       &__list {
         visibility: visible;
         opacity: 1;
