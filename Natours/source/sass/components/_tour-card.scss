@@ -4,7 +4,7 @@
 
 .tour-card {
   /* functionality and geneal styling */
-  // perspective: 64rem; // makes text blurry
+  perspective: 64rem; // makes text blurry
   position: relative;
   max-width: 24rem;
   margin: auto;
@@ -159,7 +159,7 @@
     }
   }
 
-  @media (width < $breakpoint-m) {
+  @media (hover: none) {
     box-shadow: $shadow-m;
 
     &:hover {

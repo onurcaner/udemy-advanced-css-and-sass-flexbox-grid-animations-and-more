@@ -34,6 +34,11 @@ body {
   background-color: $color-white;
 }
 
+::selection {
+  color: $color-white;
+  background-color: $color-primary;
+}
+
 @mixin background-image-settings {
   background-color: $color-primary;
   background-size: cover;
