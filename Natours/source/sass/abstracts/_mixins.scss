@@ -35,9 +35,31 @@
 }
 
 @mixin clip-path {
-  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(
+    0 max(10vw, 10vh),
+    100% 0,
+    100% calc(100% - max(10vw, 10vh)),
+    0 100%
+  );
+}
+
+@mixin clip-path-hero {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - max(10vw, 10vh)), 0 100%);
+}
+
+@mixin clip-path-front-card {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - max(5vw, 5vh)), 0 100%);
+}
+
+@mixin clip-path-back-card {
+  clip-path: polygon(0 max(5vw, 5vh), 100% 0, 100% 100%, 0 100%);
 }
 
 @mixin clip-path-inverted {
-  clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+  clip-path: polygon(
+    max(5vw, 5vh) 0,
+    100% 0%,
+    calc(100% - max(5vw, 5vh)) 100%,
+    0% 100%
+  );
 }

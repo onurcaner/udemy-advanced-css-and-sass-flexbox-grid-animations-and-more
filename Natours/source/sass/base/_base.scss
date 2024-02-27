@@ -1,30 +1,31 @@
 @use 'sass:color';
+@use 'sass:math';
 
 html {
   font-size: 125%;
   scroll-behavior: smooth;
 
-  @media (width <= 140rem) {
+  @media (width <= $breakpoint-xxl) {
     font-size: 118.75%;
   }
 
-  @media (width <= 120rem) {
+  @media (width <= $breakpoint-xl) {
     font-size: 112.5%;
   }
 
-  @media (width <= 100rem) {
+  @media (width <= $breakpoint-l) {
     font-size: 106.25%;
   }
 
-  @media (width <= 80rem) {
+  @media (width <= $breakpoint-m) {
     font-size: 100%;
   }
 
-  @media (width <= 60rem) {
+  @media (width <= $breakpoint-s) {
     font-size: 93.75%;
   }
 
-  @media (width <= 40rem) {
+  @media (width <= $breakpoint-xs) {
     font-size: 87.5%;
   }
 }
@@ -33,19 +34,22 @@ body {
   background-color: $color-white;
 }
 
-@mixin section-background-image-gradient($image-path) {
-  height: 125vh;
-  @include clip-path;
-
+@mixin background-image-settings {
   background-color: $color-primary;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin section-background-image-gradient($image-path) {
+  @include clip-path;
+  @include background-image-settings;
+
   background-image: linear-gradient(
       to right bottom,
       color.change($color-primary--light, $alpha: 0.8),
       color.change($color-primary--dark, $alpha: 0.8)
     ),
     url($image-path);
-  background-size: cover;
-  background-position: center;
 }
 
 @mixin background-gradient() {
@@ -58,8 +62,31 @@ body {
 }
 
 @mixin background-image($image-path) {
-  background-color: $color-primary;
+  @include background-image-settings;
+
   background-image: url($image-path);
-  background-size: cover;
-  background-position: center;
+}
+
+@mixin half-background-image($image-path) {
+  @include background-image-settings;
+
+  background-image: linear-gradient(
+      90deg + math.atan(0.25),
+      color.change($color-white, $alpha: 0.8) 0%,
+      color.change($color-white, $alpha: 0.8) 50%,
+      transparent 50%,
+      transparent 100%
+    ),
+    url($image-path);
+
+  @media (width <= $breakpoint-m) {
+    background-image: linear-gradient(
+        90deg + math.atan(0.25),
+        color.change($color-white, $alpha: 0.8) 0%,
+        color.change($color-white, $alpha: 0.8) 100%,
+        transparent 100%,
+        transparent 100%
+      ),
+      url($image-path);
+  }
 }

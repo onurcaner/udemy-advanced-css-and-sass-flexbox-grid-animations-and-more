@@ -3,13 +3,16 @@
 /** @define feature-card */
 
 .feature-card {
-  text-align: center;
-  background-color: color.change($color-white, $alpha: 0.8);
   @extend %card;
   @extend %transition-speed-normal;
   @extend %transition-translate-on-hover;
   @extend %transition-scale-on-hover;
   @extend %transition-shadow-m-on-hover;
+  @extend %margin-auto;
+
+  text-align: center;
+  max-width: 20rem;
+  background-color: color.change($color-white, $alpha: 0.8);
 
   &__icon {
     font-size: 4rem;

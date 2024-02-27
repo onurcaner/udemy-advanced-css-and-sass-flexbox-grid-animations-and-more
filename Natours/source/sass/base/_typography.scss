@@ -19,6 +19,7 @@ body {
   );
   background-clip: text;
   color: transparent;
+  text-shadow: $shadow-text;
 }
 
 %navigation-anchor-text {
@@ -31,8 +32,6 @@ body {
 @mixin hero-heading {
   @extend %heading;
 
-  font-size: 3.4rem;
-  letter-spacing: 1ch;
   text-align: center;
   color: $color-white;
 
@@ -50,24 +49,71 @@ body {
     letter-spacing: 0.8ch;
     font-weight: 400;
     margin-bottom: 2rem;
+
+    @media (width <= 45rem) {
+      font-size: 4rem;
+      letter-spacing: 0.7ch;
+    }
+
+    @media (width <= 35rem) {
+      font-size: 3.5rem;
+      letter-spacing: 0.6ch;
+    }
+
+    @media (width <= 27rem) {
+      font-size: 3rem;
+      letter-spacing: 0.5ch;
+    }
+
+    @media (width <= 22rem) {
+      letter-spacing: 0.25ch;
+    }
   }
 
   &--sub {
     font-size: 1.5rem;
     letter-spacing: 1.25ch;
     margin-bottom: 4rem;
+
+    @media (width <= 45rem) {
+      font-size: 1.25rem;
+      letter-spacing: 1.2ch;
+    }
+
+    @media (width <= 35rem) {
+      font-size: 1.125rem;
+      letter-spacing: 1.05ch;
+    }
+
+    @media (width <= 27rem) {
+      font-size: 1rem;
+      letter-spacing: 0.8ch;
+    }
+
+    @media (width <= 22rem) {
+      letter-spacing: 0.6ch;
+    }
   }
 }
 
 %section-heading {
   @extend %heading;
+  @extend %margin-auto;
 
   font-size: 2.25rem;
+  line-height: 1.2;
   letter-spacing: 0.1ch;
+  max-width: 25ch;
   text-align: center;
   @extend %gradient-text;
 
   margin-bottom: 4rem;
+
+  @media (width <= 26em) {
+    font-size: 2rem;
+    line-height: 1.3;
+    letter-spacing: 0.05ch;
+  }
 }
 
 %content-heading {
@@ -75,13 +121,14 @@ body {
 
   font-size: 1.125rem;
   line-height: 1.5;
+  max-width: 50ch;
   margin-bottom: 1rem;
 }
 
 %content-text {
   font-size: 1rem;
   line-height: 1.7;
-  max-width: 65ch;
+  max-width: 60ch;
   color: $color-text--light;
   @include margin-bottom(2.5rem);
 }

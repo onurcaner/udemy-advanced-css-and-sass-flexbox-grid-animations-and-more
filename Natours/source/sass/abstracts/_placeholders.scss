@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 %position-absolute-center {
   position: absolute;
   top: 50%;
@@ -11,8 +13,43 @@
 }
 
 %horizontal-padding {
-  padding-left: $length-horizontal-padding;
-  padding-right: $length-horizontal-padding;
+  padding-left: $length-horizontal-padding * 2;
+  padding-right: $length-horizontal-padding * 2;
+
+  @media (width <= $breakpoint-m) {
+    padding-left: $length-horizontal-padding;
+    padding-right: $length-horizontal-padding;
+  }
+
+  @media (width <= $breakpoint-s) {
+    padding-left: math.div($length-horizontal-padding, 2);
+    padding-right: math.div($length-horizontal-padding, 2);
+  }
+
+  @media (width <= $breakpoint-xs) {
+    padding-left: math.div($length-horizontal-padding, 4);
+    padding-right: math.div($length-horizontal-padding, 4);
+  }
+}
+
+%horizontal-margin {
+  margin-left: $length-horizontal-padding * 2;
+  margin-right: $length-horizontal-padding * 2;
+
+  @media (width <= $breakpoint-m) {
+    margin-left: $length-horizontal-padding;
+    margin-right: $length-horizontal-padding;
+  }
+
+  @media (width <= $breakpoint-s) {
+    margin-left: math.div($length-horizontal-padding, 2);
+    margin-right: math.div($length-horizontal-padding, 2);
+  }
+
+  @media (width <= $breakpoint-xs) {
+    margin-left: math.div($length-horizontal-padding, 4);
+    margin-right: math.div($length-horizontal-padding, 4);
+  }
 }
 
 %section {
@@ -22,8 +59,14 @@
   max-width: $length-max-width;
 }
 
+%section-with-margin {
+  @extend %horizontal-margin;
+
+  max-width: $length-max-width;
+}
+
 %card {
-  padding: $length-horizontal-padding;
+  padding: $length-horizontal-padding * 2 $length-horizontal-padding;
   border-radius: $border-radius;
   overflow: hidden;
   box-shadow: $shadow-m;

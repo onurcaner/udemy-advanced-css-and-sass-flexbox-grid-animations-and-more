@@ -7,16 +7,15 @@
   &__box {
     @extend %position-absolute-center;
     @extend %transition-speed-slow;
+    @extend %card;
 
     position: fixed;
     display: block;
     width: min(90vw, $length-max-width);
     max-height: 90vh;
     z-index: 101;
-    border-radius: $border-radius;
+    padding: 0;
     background-color: $color-white;
-    box-shadow: $shadow-m;
-    overflow: hidden;
     opacity: 0;
     scale: 0;
   }
@@ -87,6 +86,39 @@
     &::after {
       opacity: 1;
       backdrop-filter: blur(16px);
+    }
+  }
+
+  @media (width <= $breakpoint-m) {
+    &__image-container,
+    &__text-container {
+      display: block;
+    }
+
+    &__image-container {
+      width: auto;
+      height: unset;
+      overflow: hidden;
+    }
+
+    &__image {
+      display: inline-block;
+      width: 49.5%;
+      translate: 0 -0.5rem;
+      scale: 1.1;
+    }
+
+    &__text-container {
+      text-align: start;
+      width: 100%;
+      padding: $length-horizontal-padding * 2;
+    }
+
+    &__close-button {
+      padding: 1rem;
+      background-color: $color-white;
+      border-radius: 50%;
+      box-shadow: $shadow-s;
     }
   }
 }

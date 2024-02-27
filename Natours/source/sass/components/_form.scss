@@ -1,5 +1,8 @@
 /** @define form */
 
 .form {
-  padding: $length-horizontal-padding;
+  @extend %horizontal-padding;
+
+  padding-top: $length-horizontal-padding * 2;
+  padding-bottom: $length-horizontal-padding * 2;
 }

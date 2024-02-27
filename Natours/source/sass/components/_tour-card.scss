@@ -3,9 +3,11 @@
 /** @define tour-card  */
 
 .tour-card {
-  /* funtionality and gerenal styling */
-  perspective: 64rem;
+  /* functionality and geneal styling */
+  // perspective: 64rem; // makes text blurry
   position: relative;
+  max-width: 24rem;
+  margin: auto;
 
   &,
   &__front,
@@ -74,10 +76,11 @@
 
   /* front face styling */
   &__image {
+    @include clip-path-front-card;
+
     height: 16rem;
     background-blend-mode: screen;
     background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
     &--primary {
       background-image: linear-gradient(
@@ -153,6 +156,42 @@
 
     :last-child {
       @extend %price-text;
+    }
+  }
+
+  @media (width < $breakpoint-m) {
+    box-shadow: $shadow-m;
+
+    &:hover {
+      box-shadow: $shadow-l;
+    }
+
+    &__front,
+    &__back {
+      position: relative;
+      box-shadow: none;
+      min-height: unset;
+    }
+
+    &__back {
+      @include clip-path-back-card;
+    }
+
+    &__front,
+    &__back,
+    &:hover &__front,
+    &:hover &__back {
+      box-shadow: unset;
+      rotate: unset;
+    }
+
+    &__properties {
+      padding-bottom: 0;
+    }
+
+    &__price {
+      margin-top: 0;
+      margin-bottom: 2.5rem;
     }
   }
 }

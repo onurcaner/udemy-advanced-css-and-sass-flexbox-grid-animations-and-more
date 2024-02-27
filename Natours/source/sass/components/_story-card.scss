@@ -13,10 +13,10 @@
     @extend %margin-auto;
     @include clip-path-inverted;
 
-    width: calc(100% / 1.5);
+    max-width: calc(48rem + 10vw);
     background-color: color.change($color-white, $alpha: 0.8);
     padding: $length-horizontal-padding * 2
-      calc($length-horizontal-padding * 1.5 + calc(10% / 1.5));
+      calc($length-horizontal-padding + 10vw);
   }
 
   &__image-container {
@@ -64,5 +64,14 @@
 
   &__text-container {
     translate: $length-horizontal-padding * 0.5;
+  }
+
+  @media (width <= $breakpoint-xs) {
+    &__image-container {
+      shape-outside: unset;
+      float: unset;
+      translate: 0;
+      margin: 0 auto 2.5rem;
+    }
   }
 }

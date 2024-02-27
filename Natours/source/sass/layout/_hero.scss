@@ -2,8 +2,9 @@
 
 .hero {
   @include section-background-image-gradient('../assets/images/hero.jpg');
+  @include clip-path-hero;
 
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  height: 125vh;
   position: relative;
   background-position: top;
 

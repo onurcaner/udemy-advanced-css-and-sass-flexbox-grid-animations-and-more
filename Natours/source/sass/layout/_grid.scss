@@ -1,21 +1,26 @@
+@use 'sass:math';
+
 /** @define grid */
 
 .grid {
-  $length-gap--column: 4rem;
+  $length-gap--column: $length-horizontal-padding * 2;
   $length-gap--row: 8rem;
 
   width: 100%;
 
   &__row {
-    width: 100%;
     @include clear-fix;
+    @extend %margin-auto;
     @include row-gap($length-gap--row);
+
+    width: 100%;
   }
 
   &__column {
+    @include column-gap($length-gap--column);
+
     float: left;
     width: 100%;
-    @include column-gap($length-gap--column);
 
     &--size--1-of-2 {
       width: calc(
@@ -51,6 +56,23 @@
       width: calc(
         (100% - 3 * #{$length-gap--column}) * (3 / 4) + 2 * #{$length-gap--column}
       );
+    }
+  }
+
+  @media (width <= $breakpoint-m) {
+    &__row {
+      margin-bottom: 0;
+
+      ::after {
+        content: unset;
+      }
+    }
+
+    .grid__column.grid__column.grid__column.grid__column {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      @include row-gap(math.div($length-gap--row, 2));
     }
   }
 }
