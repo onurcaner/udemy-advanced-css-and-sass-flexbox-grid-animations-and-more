@@ -1,0 +1,5 @@
+@use '../mixins/typography';
+
+body {
+  @include typography.font-family;
+}
