@@ -1,0 +1,23 @@
+@use 'sass:math';
+@use '../mixins/flexes';
+
+.header {
+  @include flexes.row-center;
+
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--color-grey--lightest);
+
+  &__logo {
+    height: 2.5rem;
+  }
+}
+
+.header .search {
+  width: calc(50% * 0.875);
+  transition: all var(--speed-medium) ease-in-out;
+
+  &:has(:focus-visible) {
+    width: 50%;
+  }
+}

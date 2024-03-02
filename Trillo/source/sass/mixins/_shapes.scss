@@ -1,0 +1,12 @@
+@mixin square {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+@mixin circle {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+}

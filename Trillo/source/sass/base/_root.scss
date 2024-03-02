@@ -1,2 +1,47 @@
+@use '../variables/colors';
+@use '../variables/shadows';
+@use '../variables/speeds';
+@use '../variables/spaces';
+
+// Colors
 :root {
+  --color-primary: #{colors.$primary};
+  --color-primary--light: #{colors.$primary-light};
+  --color-primary--dark: #{colors.$primary-dark};
+
+  --color-grey--lightest: #{colors.$grey-lightest};
+  --color-grey--lighter: #{colors.$grey-lighter};
+  --color-grey--light: #{colors.$grey-light};
+  --color-grey: #{colors.$grey};
+  --color-grey--dark: #{colors.$grey-dark};
+  --color-grey--darker: #{colors.$grey-darker};
+  --color-grey--darkest: #{colors.$grey-darkest};
+}
+
+// Shadows
+:root {
+  --shadow-xs: #{shadows.$xs};
+  --shadow-s: #{shadows.$s};
+  --shadow-m: #{shadows.$m};
+  --shadow-l: #{shadows.$l};
+  --shadow-xl: #{shadows.$xl};
+}
+
+// Speeds
+:root {
+  --speed-very-fast: #{speeds.$very-fast};
+  --speed-fast: #{speeds.$fast};
+  --speed-medium: #{speeds.$medium};
+  --speed-slow: #{speeds.$slow};
+  --speed-very-slow: #{speeds.$very-slow};
+}
+
+// Spaces
+:root {
+  --space-default: #{spaces.$default};
+  --space-around: #{spaces.$default};
+  --space-column-gap: #{spaces.$column-gap};
+  --space-row-gap: #{spaces.$row-gap};
+  --space-max-width: #{spaces.$max-width};
+  --space-border-radius: #{spaces.$border-radius};
 }

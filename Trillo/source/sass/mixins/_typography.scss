@@ -1,8 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
 
+@mixin _color {
+  color: var(--color-grey--darkest);
+}
+
 @mixin font-family {
   font-family: 'Open Sans', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: 'wdth' 100;
+}
+
+@mixin content {
+  @include _color;
+
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 400;
 }

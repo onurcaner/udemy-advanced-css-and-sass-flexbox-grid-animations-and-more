@@ -1,0 +1,46 @@
+@use '../mixins/flexes';
+@use '../mixins/focuses';
+@use '../mixins/shapes';
+@use '../mixins/typography';
+
+.user-navigation {
+  @include flexes.row-center;
+
+  column-gap: 1rem;
+
+  &__button {
+    @include focuses.focus-visible(currentcolor);
+
+    color: var(--color-grey--darker);
+    padding: 0.75rem;
+    background-color: transparent;
+    border-radius: 5rem;
+    transition: all var(--speed-medium) ease-in-out;
+
+    &:hover {
+      background-color: var(--color-grey--light);
+    }
+  }
+
+  &__button--profile-container {
+    @include flexes.row-center;
+
+    column-gap: 0.5rem;
+  }
+
+  &__icon {
+    @include shapes.square;
+
+    font-size: 1.5rem;
+    fill: currentColor;
+  }
+
+  &__image {
+    height: 3rem;
+    border-radius: 50%;
+  }
+
+  &__username {
+    @include typography.content;
+  }
+}

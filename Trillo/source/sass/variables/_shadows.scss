@@ -1,0 +1,7 @@
+@use 'sass:color';
+
+$xs: 0 0 0.25rem color.change(#000, $alpha: 0.08);
+$s: 0 0 0.5rem color.change(#000, $alpha: 0.09);
+$m: 0 0 1rem color.change(#000, $alpha: 0.1);
+$l: 0 0 2rem color.change(#000, $alpha: 0.11);
+$xl: 0 0 4rem color.change(#000, $alpha: 0.12);

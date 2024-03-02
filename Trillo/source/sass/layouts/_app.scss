@@ -1,0 +1,24 @@
+@use '../mixins/flexes';
+
+.app-container {
+  @include flexes.column-center;
+
+  padding: var(--space-default);
+}
+
+.app {
+  width: 100%;
+  max-width: var(--space-max-width);
+}
+
+.navigation-and-main-container {
+  @include flexes.row-center;
+}
+
+.navigation {
+  flex: initial;
+}
+
+.main {
+  flex: auto;
+}

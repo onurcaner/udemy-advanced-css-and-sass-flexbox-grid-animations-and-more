@@ -11,7 +11,76 @@
     />
     <link rel="stylesheet" href="./source/sass/style.scss" />
   </head>
-  <body>
-    TEST
+  <body class="app-container">
+    <div class="app">
+      <header class="header">
+        <img
+          class="header__logo"
+          src="source/assets/images/logo.png"
+          width="153"
+          height="106"
+          alt="Trillo logo"
+        />
+        <form class="search">
+          <input
+            class="search__input"
+            type="text"
+            aria-label="Search hotels"
+            placeholder="Search hotels"
+          />
+          <button class="search__button" type="submit" aria-label="Search">
+            <svg class="search__icon" xmlns="http://www.w3.org/2000/svg">
+              <use
+                href="source/assets/icons/sprite.svg#icon-magnifying-glass"
+              />
+            </svg>
+          </button>
+        </form>
+        <nav class="user-navigation">
+          <button
+            class="user-navigation__button"
+            type="button"
+            aria-label="bookmarks"
+          >
+            <svg
+              class="user-navigation__icon"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use href="source/assets/icons/sprite.svg#icon-bookmark" />
+            </svg>
+          </button>
+          <button
+            class="user-navigation__button"
+            type="button"
+            aria-label="messages"
+          >
+            <svg
+              class="user-navigation__icon"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use href="source/assets/icons/sprite.svg#icon-chat" />
+            </svg>
+          </button>
+          <button
+            class="user-navigation__button user-navigation__button--profile-container"
+            type="button"
+            aria-label="profile"
+          >
+            <img
+              class="user-navigation__image"
+              src="source/assets/images/user.jpg"
+              width="400"
+              height="400"
+              alt="User"
+            />
+            <p class="user-navigation__username">Jonas</p>
+          </button>
+        </nav>
+      </header>
+      <div class="navigation-and-main-container">
+        <nav class="navigation">NAVIGATION</nav>
+        <main class="main">HOTEL VIEW</main>
+      </div>
+    </div>
   </body>
 </html>
