@@ -25,12 +25,12 @@
 
     &::placeholder {
       @include typography.content();
-      color: var(--color-grey--darker);
+      color: var(--color-grey--dark);
     }
   }
 
   &__button {
-    @include focuses.focus-visible(currentcolor);
+    @include focuses.focus-visible(currentColor);
     @include positions.absolute-center();
 
     left: unset;

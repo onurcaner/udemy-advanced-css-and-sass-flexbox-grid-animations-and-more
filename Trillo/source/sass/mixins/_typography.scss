@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
 
-@mixin _color {
-  color: var(--color-grey--darkest);
-}
-
-@mixin _color-light {
-  color: var(--color-white);
-}
-
 @mixin font-family {
   font-family: 'Open Sans', sans-serif;
   font-optical-sizing: auto;
@@ -16,20 +8,18 @@
 }
 
 @mixin content {
-  @include _color();
-
   font-size: 1rem;
   line-height: 1.8;
   font-weight: 400;
+  color: var(--color-grey--darker);
 }
 
 @mixin notification-badge {
-  @include _color-light();
-
   font-size: 0.7rem;
   line-height: 1;
   font-weight: 600;
   background-color: var(--color-primary--light);
+  color: var(--color-white);
 }
 
 @mixin username {
@@ -45,6 +35,7 @@
   font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
+  text-wrap: nowrap;
   color: var(--color-grey--light);
 }
 
@@ -54,4 +45,54 @@
   font-weight: 400;
   text-align: center;
   color: var(--color-grey);
+}
+
+@mixin anchor {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: var(--color-primary);
+
+  &:hover {
+    color: var(--color-primary--dark);
+  }
+
+  &:active {
+    color: color-mix(
+      in srgb,
+      var(--color-primary--dark),
+      var(--color-grey--darkest)
+    );
+  }
+}
+
+@mixin heading {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--color-grey--darker);
+}
+
+@mixin rating {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 300;
+  text-align: center;
+  color: var(--color-white);
+}
+
+@mixin votes {
+  font-size: 0.7rem;
+  line-height: 2;
+  font-weight: 500;
+  text-align: center;
+  text-wrap: nowrap;
+  color: var(--color-white);
+}
+
+@mixin add-underline {
+  padding-bottom: max(0.125rem, 2px);
+  border-bottom: max(0.125rem, 2px) solid currentColor;
+  margin-bottom: calc(-1 * max(0.25rem, 4px));
 }

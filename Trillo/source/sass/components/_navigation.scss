@@ -26,13 +26,12 @@
       background-color: var(--color-primary);
       transition: height var(--speed-medium) ease-in-out,
         width var(--speed-medium) ease-in-out var(--speed-medium),
-        background-color var(--speed-very-fast) ease-in-out;
+        background-color var(--speed-medium) ease-in-out;
     }
   }
 
   &__anchor {
     @include flexes.row-center();
-    @include focuses.focus-visible(currentcolor);
     @include typography.navigation();
 
     gap: 2rem;
@@ -40,6 +39,8 @@
     z-index: 1;
     padding: 1.25rem 2rem;
     background-color: transparent;
+    border-bottom: unset;
+    margin-bottom: unset;
     transition: all var(--speed-medium) ease-in-out;
 
     &::after {

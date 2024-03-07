@@ -31,9 +31,20 @@ button {
 
 a {
   display: inline-block;
+  text-decoration: none;
   color: inherit;
 }
 
-ul {
+ul,
+ol {
   list-style-type: none;
+}
+
+li {
+  display: inherit;
+}
+
+img {
+  width: auto;
+  height: auto;
 }

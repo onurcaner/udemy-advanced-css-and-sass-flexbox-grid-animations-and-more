@@ -1,0 +1,10 @@
+@use '../mixins/flexes';
+
+.gallery {
+  width: 100%;
+  @include flexes.row();
+
+  &__image {
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+@mixin top {
+  border-top: max(0.0625rem, 1px) solid var(--color-grey--light);
+}
+
+@mixin bottom {
+  border-bottom: max(0.0625rem, 1px) solid var(--color-grey--light);
+}
+
+@mixin top-and-bottom {
+  @include top();
+  @include bottom();
+}

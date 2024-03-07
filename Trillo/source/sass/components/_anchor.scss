@@ -1,0 +1,11 @@
+@use '../mixins/focuses';
+@use '../mixins/typography';
+
+.anchor {
+  @include focuses.focus-visible(currentColor);
+  @include typography.anchor();
+  @include typography.add-underline();
+
+  padding: 0 0.25rem;
+  transition: all var(--speed-medium) ease-in-out;
+}

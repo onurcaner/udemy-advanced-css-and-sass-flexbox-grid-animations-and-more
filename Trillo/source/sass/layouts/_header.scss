@@ -1,7 +1,10 @@
 @use 'sass:math';
+
+@use '../mixins/borders';
 @use '../mixins/flexes';
 
 .header {
+  @include borders.bottom();
   @include flexes.row-center();
 
   justify-content: space-between;

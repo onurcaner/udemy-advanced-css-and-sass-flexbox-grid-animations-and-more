@@ -10,7 +10,7 @@
   column-gap: 1rem;
 
   &__button {
-    @include focuses.focus-visible(currentcolor);
+    @include focuses.focus-visible(currentColor);
 
     position: relative;
     color: var(--color-grey--darker);
