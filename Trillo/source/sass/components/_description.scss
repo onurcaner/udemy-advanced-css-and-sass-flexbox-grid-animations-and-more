@@ -1,0 +1,23 @@
+@use '../mixins/typography';
+@use '../mixins/borders';
+
+.description {
+  padding: 2rem;
+  background-color: var(--color-white);
+  border-radius: var(--space-border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-m);
+
+  &__paragraph {
+    @include typography.content();
+
+    margin-bottom: 1.25rem;
+
+    &:last-of-type {
+      @include borders.bottom();
+
+      margin-bottom: 1.25rem + 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+}

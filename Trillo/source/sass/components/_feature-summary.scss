@@ -1,0 +1,29 @@
+@use '../mixins/flexes';
+@use '../mixins/shapes';
+@use '../mixins/typography';
+
+.feature-summary {
+  @include flexes.row();
+
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 1rem;
+
+  &__item {
+    flex: 0 1 calc(50% - 1rem);
+  }
+
+  &__text {
+    @include flexes.row-center();
+    @include typography.content();
+
+    gap: 0.5rem;
+    text-wrap: nowrap;
+  }
+
+  &__icon {
+    @include shapes.square(1.125rem);
+
+    fill: var(--color-primary);
+  }
+}
