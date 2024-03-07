@@ -1,12 +1,9 @@
-@mixin square {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+@mixin square($length) {
+  width: $length;
+  height: $length;
 }
 
-@mixin circle {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+@mixin circle($length) {
+  @include square($length);
   border-radius: 50%;
 }

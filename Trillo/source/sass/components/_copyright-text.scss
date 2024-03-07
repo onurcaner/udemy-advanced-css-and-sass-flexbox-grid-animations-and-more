@@ -1,0 +1,5 @@
+@use '../mixins/typography';
+
+.copyright-text {
+  @include typography.copyright();
+}

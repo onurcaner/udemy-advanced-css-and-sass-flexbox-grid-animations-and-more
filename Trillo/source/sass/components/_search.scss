@@ -1,10 +1,11 @@
 @use '../mixins/flexes';
 @use '../mixins/focuses';
+@use '../mixins/positions';
 @use '../mixins/shapes';
 @use '../mixins/typography';
 
 .search {
-  @include flexes.column-center;
+  @include flexes.column-center();
 
   position: relative;
 
@@ -14,7 +15,7 @@
   }
 
   &__input {
-    @include typography.content;
+    @include typography.content();
     @include focuses.focus-visible(var(--color-grey--darker));
 
     width: 100%;
@@ -23,26 +24,24 @@
     border-radius: 2rem;
 
     &::placeholder {
-      @include typography.content;
+      @include typography.content();
       color: var(--color-grey--darker);
     }
   }
 
   &__button {
     @include focuses.focus-visible(currentcolor);
+    @include positions.absolute-center();
 
-    position: absolute;
+    left: unset;
     right: 0;
-    top: 50%;
-    translate: -50% -50%;
     color: var(--color-grey--darker);
     border-radius: 50%;
   }
 
   &__icon {
-    @include shapes.circle;
+    @include shapes.circle(1.5rem);
 
-    font-size: 1.5rem;
     fill: currentColor;
   }
 }

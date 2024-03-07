@@ -1,3 +1,80 @@
+@use '../mixins/flexes';
+@use '../mixins/focuses';
+@use '../mixins/positions';
+@use '../mixins/shapes';
+@use '../mixins/typography';
+
+/* Static */
 .navigation {
   background-color: var(--color-grey--darkest);
+
+  &__list {
+    @include flexes.column();
+
+    gap: 0.5rem;
+  }
+
+  &__item {
+    position: relative;
+
+    &::before {
+      @include positions.absolute-align();
+
+      content: '';
+      width: 0.5rem;
+      height: 0;
+      background-color: var(--color-primary);
+      transition: height var(--speed-medium) ease-in-out,
+        width var(--speed-medium) ease-in-out var(--speed-medium),
+        background-color var(--speed-very-fast) ease-in-out;
+    }
+  }
+
+  &__anchor {
+    @include flexes.row-center();
+    @include focuses.focus-visible(currentcolor);
+    @include typography.navigation();
+
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+    padding: 1.25rem 2rem;
+    background-color: transparent;
+    transition: all var(--speed-medium) ease-in-out;
+
+    &::after {
+      content: '';
+    }
+  }
+
+  &__anchor::after,
+  &__icon {
+    @include shapes.square(1.25rem);
+
+    fill: currentColor;
+  }
+}
+
+/* Hover and Active Effects */
+.navigation {
+  &__item:has(&__anchor:hover),
+  &__item:has(&__anchor:focus-visible),
+  &__item:has(&__anchor--active) {
+    &::before {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__item:has(&__anchor:active)::before {
+    background-color: var(--color-primary--light);
+  }
+
+  &__anchor {
+    &:hover,
+    &:focus-visible,
+    &--active {
+      color: var(--color-white);
+    }
+  }
 }

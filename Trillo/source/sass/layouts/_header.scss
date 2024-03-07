@@ -2,10 +2,10 @@
 @use '../mixins/flexes';
 
 .header {
-  @include flexes.row-center;
+  @include flexes.row-center();
 
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 2rem;
   background-color: var(--color-grey--lightest);
 
   &__logo {

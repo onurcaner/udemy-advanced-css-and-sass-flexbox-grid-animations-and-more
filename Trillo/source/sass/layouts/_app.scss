@@ -1,7 +1,7 @@
 @use '../mixins/flexes';
 
 .app-container {
-  @include flexes.column-center;
+  @include flexes.column-center();
 
   padding: var(--space-default);
 }
@@ -11,14 +11,26 @@
   max-width: var(--space-max-width);
 }
 
-.navigation-and-main-container {
-  @include flexes.row-center;
+.sidebar-and-main-container {
+  @include flexes.row-stretch();
+}
+
+.sidebar {
+  @include flexes.column();
+
+  justify-content: space-between;
 }
 
 .navigation {
   flex: initial;
 }
 
+.copyright-text {
+  flex: initial;
+}
+
 .main {
   flex: auto;
+  height: 50rem;
+  background-color: cadetblue;
 }

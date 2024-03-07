@@ -1,0 +1,20 @@
+@mixin absolute-align {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  translate: 0 -50%;
+}
+
+@mixin absolute-justify {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}

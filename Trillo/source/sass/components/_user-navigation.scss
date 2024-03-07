@@ -1,16 +1,18 @@
 @use '../mixins/flexes';
 @use '../mixins/focuses';
+@use '../mixins/positions';
 @use '../mixins/shapes';
 @use '../mixins/typography';
 
 .user-navigation {
-  @include flexes.row-center;
+  @include flexes.row-center();
 
   column-gap: 1rem;
 
   &__button {
     @include focuses.focus-visible(currentcolor);
 
+    position: relative;
     color: var(--color-grey--darker);
     padding: 0.75rem;
     background-color: transparent;
@@ -22,16 +24,24 @@
     }
   }
 
-  &__button--profile-container {
-    @include flexes.row-center;
+  &__notification-badge {
+    @include flexes.center();
+    @include typography.notification-badge();
+    @include positions.absolute-justify();
+    @include shapes.circle(1.125rem);
 
-    column-gap: 0.5rem;
+    left: 75%;
+  }
+
+  &__button--profile-container {
+    @include flexes.row-center();
+
+    column-gap: 0.7rem;
   }
 
   &__icon {
-    @include shapes.square;
+    @include shapes.square(1.5rem);
 
-    font-size: 1.5rem;
     fill: currentColor;
   }
 
@@ -41,6 +51,6 @@
   }
 
   &__username {
-    @include typography.content;
+    @include typography.username();
   }
 }

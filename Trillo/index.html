@@ -13,6 +13,7 @@
   </head>
   <body class="app-container">
     <div class="app">
+      <!-- Header -->
       <header class="header">
         <img
           class="header__logo"
@@ -48,6 +49,11 @@
             >
               <use href="source/assets/icons/sprite.svg#icon-bookmark" />
             </svg>
+            <span
+              class="user-navigation__notification-badge"
+              aria-label="Number of bookmark notifications"
+              >4</span
+            >
           </button>
           <button
             class="user-navigation__button"
@@ -60,6 +66,11 @@
             >
               <use href="source/assets/icons/sprite.svg#icon-chat" />
             </svg>
+            <span
+              class="user-navigation__notification-badge"
+              aria-label="Number of message notifications"
+              >9+</span
+            >
           </button>
           <button
             class="user-navigation__button user-navigation__button--profile-container"
@@ -77,8 +88,74 @@
           </button>
         </nav>
       </header>
-      <div class="navigation-and-main-container">
-        <nav class="navigation">NAVIGATION</nav>
+      <div class="sidebar-and-main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a
+                  class="navigation__anchor navigation__anchor--active"
+                  href="#"
+                  ><span aria-label="Hotel icon"
+                    ><svg
+                      class="navigation__icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use
+                        href="source/assets/icons/sprite.svg#icon-home"
+                      /></svg></span
+                  ><span>Hotel</span></a
+                >
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__anchor" href="#"
+                  ><span aria-label="Hotel icon"
+                    ><svg
+                      class="navigation__icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use
+                        href="source/assets/icons/sprite.svg#icon-aircraft-take-off"
+                      /></svg></span
+                  ><span>Flight</span></a
+                >
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__anchor" href="#"
+                  ><span aria-label="Hotel icon"
+                    ><svg
+                      class="navigation__icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use
+                        href="source/assets/icons/sprite.svg#icon-key"
+                      /></svg></span
+                  ><span>Car rental</span></a
+                >
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__anchor" href="#"
+                  ><span aria-label="Hotel icon"
+                    ><svg
+                      class="navigation__icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use
+                        href="source/assets/icons/sprite.svg#icon-map"
+                      /></svg></span
+                  ><span>Tours</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+          <p class="copyright-text">
+            &copy; 2017 by Trillo.
+            <br />
+            All rights reserved.
+          </p>
+        </aside>
+        <!-- Main -->
         <main class="main">HOTEL VIEW</main>
       </div>
     </div>

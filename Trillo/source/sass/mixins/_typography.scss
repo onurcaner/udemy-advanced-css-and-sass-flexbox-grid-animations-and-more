@@ -4,6 +4,10 @@
   color: var(--color-grey--darkest);
 }
 
+@mixin _color-light {
+  color: var(--color-white);
+}
+
 @mixin font-family {
   font-family: 'Open Sans', sans-serif;
   font-optical-sizing: auto;
@@ -12,9 +16,42 @@
 }
 
 @mixin content {
-  @include _color;
+  @include _color();
 
   font-size: 1rem;
   line-height: 1.8;
   font-weight: 400;
+}
+
+@mixin notification-badge {
+  @include _color-light();
+
+  font-size: 0.7rem;
+  line-height: 1;
+  font-weight: 600;
+  background-color: var(--color-primary--light);
+}
+
+@mixin username {
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: var(--color-grey--darker);
+}
+
+@mixin navigation {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-grey--light);
+}
+
+@mixin copyright {
+  font-size: 0.7rem;
+  line-height: 1.9;
+  font-weight: 400;
+  text-align: center;
+  color: var(--color-grey);
 }

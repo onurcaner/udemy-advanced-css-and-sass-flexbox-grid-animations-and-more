@@ -24,8 +24,16 @@ input {
 }
 
 button {
-  display: flex;
   background-color: unset;
   border: none;
   cursor: pointer;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
 }

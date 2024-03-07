@@ -2,6 +2,6 @@
 @use '../mixins/gradients';
 
 body {
-  @include typography.font-family;
+  @include typography.font-family();
   @include gradients.linear(135deg);
 }
