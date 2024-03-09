@@ -1,0 +1,28 @@
+@use '../mixins/flexes';
+@use '../mixins/shapes';
+@use '../mixins/typography';
+
+.recommend {
+  @include flexes.row-center();
+
+  justify-content: space-between;
+  gap: 2rem;
+
+  &__paragraph {
+    @include typography.content();
+  }
+
+  &__list {
+    @include flexes.row-center();
+
+    margin-right: 1.5rem;
+  }
+
+  &__image {
+    @include shapes.circle(2.5rem);
+
+    box-sizing: content-box;
+    border: max(0.125rem, 2px) solid var(--color-white);
+    margin-right: -1.5rem;
+  }
+}

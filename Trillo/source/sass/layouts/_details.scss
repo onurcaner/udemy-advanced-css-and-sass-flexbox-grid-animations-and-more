@@ -1,18 +1,32 @@
+@use '../mixins/borders';
+@use '../mixins/cards';
 @use '../mixins/flexes';
 
 .details {
   @include flexes.row();
 
-  gap: var(--space-default);
-  padding: var(--space-default);
+  gap: calc(var(--space-column-gap) * 1);
+  padding: calc(var(--space-around) * 1);
   background-color: var(--color-grey--lightest);
 }
 
-.description {
+.description-features-recommend-container {
   flex: 0 1 65%;
 }
 
 .user-reviews-container {
   flex: 1 1 auto;
   background-color: lightblue;
+}
+
+.description-features-recommend-container,
+.user-reviews-container {
+  @include cards.content();
+}
+
+//.description-features-recommend-container
+.feature-summary {
+  @include borders.top-and-bottom();
+  padding-block: var(--space-around);
+  margin-block: var(--space-around);
 }

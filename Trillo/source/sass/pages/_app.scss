@@ -1,6 +1,5 @@
+@use '../mixins/cards';
+
 .app {
-  background-color: #fff;
-  border-radius: var(--space-border-radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-xl);
+  @include cards.app();
 }

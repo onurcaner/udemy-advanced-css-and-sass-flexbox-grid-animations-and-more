@@ -3,7 +3,7 @@
 .app-container {
   @include flexes.column-center();
 
-  padding: var(--space-default);
+  padding: var(--space-around);
 }
 
 .app {

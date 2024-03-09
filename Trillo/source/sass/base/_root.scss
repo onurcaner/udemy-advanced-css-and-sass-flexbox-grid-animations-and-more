@@ -41,7 +41,7 @@
 // Spaces
 :root {
   --space-default: #{spaces.$default};
-  --space-around: #{spaces.$default};
+  --space-around: #{spaces.$around};
   --space-column-gap: #{spaces.$column-gap};
   --space-row-gap: #{spaces.$row-gap};
   --space-max-width: #{spaces.$max-width};

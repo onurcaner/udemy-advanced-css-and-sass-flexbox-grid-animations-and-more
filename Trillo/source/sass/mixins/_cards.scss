@@ -1,0 +1,18 @@
+@mixin _card {
+  background-color: var(--color-white);
+  border-radius: var(--space-border-radius);
+  overflow: hidden;
+}
+
+@mixin content {
+  @include _card();
+
+  padding: var(--space-around);
+  box-shadow: var(--shadow-m);
+}
+
+@mixin app {
+  @include _card();
+
+  box-shadow: var(--shadow-xl);
+}
