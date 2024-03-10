@@ -1,0 +1,55 @@
+@use '../mixins/cards';
+@use '../mixins/flexes';
+@use '../mixins/shapes';
+@use '../mixins/typography';
+
+.review {
+  @include cards.content();
+
+  position: relative;
+
+  &__text {
+    @include typography.content();
+
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2rem;
+  }
+
+  &__user-and-rating-container {
+    @include flexes.row-center();
+  }
+
+  &__user-image {
+    @include shapes.circle(3rem);
+
+    margin-right: 1rem;
+  }
+
+  &__username-and-time-container {
+    margin-right: auto;
+  }
+
+  &__username {
+    @include typography.content();
+  }
+
+  &__time {
+    @include typography.content-small();
+  }
+
+  &__rating {
+    @include typography.rating-primary();
+  }
+
+  &::before {
+    content: '\201C';
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: 12.5% -12.5%;
+    font-size: 20rem;
+    line-height: 1;
+    color: var(--color-grey--lighter);
+  }
+}

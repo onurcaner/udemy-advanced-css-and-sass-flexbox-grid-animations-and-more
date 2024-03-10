@@ -5,28 +5,36 @@
 .details {
   @include flexes.row();
 
-  gap: calc(var(--space-column-gap) * 1);
-  padding: calc(var(--space-around) * 1);
+  gap: var(--space-column-gap);
+  padding: var(--space-around);
   background-color: var(--color-grey--lightest);
 }
 
+// Left
 .description-features-recommend-container {
-  flex: 0 1 65%;
-}
-
-.user-reviews-container {
-  flex: 1 1 auto;
-  background-color: lightblue;
-}
-
-.description-features-recommend-container,
-.user-reviews-container {
   @include cards.content();
+
+  flex: 1 1 65%;
 }
 
-//.description-features-recommend-container
+// Right
+.user-reviews-container {
+  @include flexes.column-center();
+
+  flex: 1 1 35%;
+  gap: var(--space-column-gap);
+}
+
+// inside .description-features-recommend-container
 .feature-summary {
   @include borders.top-and-bottom();
   padding-block: var(--space-around);
   margin-block: var(--space-around);
+}
+
+// inside .user-reviews-container
+.user-review-list {
+  @include flexes.column();
+
+  gap: var(--space-column-gap);
 }

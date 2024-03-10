@@ -10,10 +10,24 @@ Offered at: [Udemy](https://www.udemy.com/)
 
 ### 1. Natours Landing Page
 
-- Description: The 'Natours' landing page
+- Description: Homepage of the 'Natours'.
 
 - Requirements: None
 
 - Environment: Driven by Node, displayed in browser
 
 - Code: [This Repository / Natours](./Natours)
+
+- Notes: Floats are used to place elements on the page.
+
+### 1. Trillo App Page
+
+- Description: Hotel page of the 'Trillo' app.
+
+- Requirements: None
+
+- Environment: Driven by Node, displayed in browser
+
+- Code: [This Repository / Trillo](./Trillo)
+
+- Notes: Flexbox is used to place elements on the page.

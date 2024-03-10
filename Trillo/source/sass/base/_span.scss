@@ -1,0 +1,5 @@
+@use '../mixins/flexes';
+
+span[role='img']:has(svg) {
+  @include flexes.row-center();
+}

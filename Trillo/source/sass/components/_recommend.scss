@@ -15,14 +15,14 @@
   &__list {
     @include flexes.row-center();
 
-    margin-right: 1.5rem;
+    margin-right: 2rem;
   }
 
   &__image {
-    @include shapes.circle(2.5rem);
+    @include shapes.circle(3rem);
 
     box-sizing: content-box;
     border: max(0.125rem, 2px) solid var(--color-white);
-    margin-right: -1.5rem;
+    margin-right: -2rem;
   }
 }

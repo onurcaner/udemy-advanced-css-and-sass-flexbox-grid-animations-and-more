@@ -61,7 +61,7 @@
   }
 
   &__rating {
-    @include typography.rating();
+    @include typography.rating-white();
   }
 
   &__votes {

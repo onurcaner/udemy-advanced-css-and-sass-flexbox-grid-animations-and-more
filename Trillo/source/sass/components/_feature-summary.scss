@@ -22,7 +22,7 @@
   }
 
   &__icon {
-    @include shapes.square(1.125rem);
+    @include shapes.square(1rem);
 
     fill: var(--color-primary);
   }
