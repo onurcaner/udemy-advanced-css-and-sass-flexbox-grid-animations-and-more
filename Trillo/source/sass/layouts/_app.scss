@@ -1,9 +1,10 @@
+@use '../variables/breakpoints';
 @use '../mixins/flexes';
 
 .app-container {
   @include flexes.column-center();
 
-  padding: var(--space-around);
+  padding: calc(var(--space-around) * 2);
 }
 
 .app {
@@ -13,22 +14,4 @@
 
 .sidebar-and-main-container {
   @include flexes.row-stretch();
-}
-
-.sidebar {
-  @include flexes.column();
-
-  justify-content: space-between;
-}
-
-.navigation {
-  flex: initial;
-}
-
-.copyright-text {
-  flex: initial;
-}
-
-.main {
-  flex: auto;
 }

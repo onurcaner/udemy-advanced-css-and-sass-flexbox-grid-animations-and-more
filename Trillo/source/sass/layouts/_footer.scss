@@ -1,0 +1,8 @@
+@use '../variables/breakpoints';
+
+.footer {
+  display: none;
+  visibility: hidden;
+  padding-block: var(--space-around);
+  background-color: var(--color-grey--darkest);
+}

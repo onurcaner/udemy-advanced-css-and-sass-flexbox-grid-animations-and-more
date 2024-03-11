@@ -1,3 +1,29 @@
+@use '../variables/breakpoints';
+
 html {
-  font-size: 112.5%;
+  font-size: 125%;
+
+  @media (width <= breakpoints.$xxxl) {
+    font-size: 118.75%;
+  }
+
+  @media (width <= breakpoints.$xxl) {
+    font-size: 112.5%;
+  }
+
+  @media (width <= breakpoints.$xl) {
+    font-size: 106.25%;
+  }
+
+  @media (width <= breakpoints.$l) {
+    font-size: 100%;
+  }
+
+  @media (width <= breakpoints.$m) {
+    font-size: 93.75%;
+  }
+
+  @media (width <= breakpoints.$s) {
+    font-size: 87.5%;
+  }
 }

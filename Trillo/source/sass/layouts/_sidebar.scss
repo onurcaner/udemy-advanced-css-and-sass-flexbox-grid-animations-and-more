@@ -1,4 +1,18 @@
+@use '../variables//breakpoints';
+@use '../mixins/flexes';
+
 .sidebar {
+  @include flexes.column();
+
+  justify-content: space-between;
   padding-block: var(--space-around);
   background-color: var(--color-grey--darkest);
+}
+
+.navigation {
+  flex: initial;
+}
+
+.copyright-text {
+  flex: initial;
 }
