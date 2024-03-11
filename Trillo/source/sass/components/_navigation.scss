@@ -15,6 +15,8 @@
   }
 
   &__item {
+    @include focuses.focus-within(var(--color-primary));
+
     position: relative;
 
     &::before {
@@ -41,6 +43,7 @@
     background-color: transparent;
     border-bottom: unset;
     margin-bottom: unset;
+    outline: none;
     transition: all var(--speed-medium) ease-in-out;
 
     &::after {

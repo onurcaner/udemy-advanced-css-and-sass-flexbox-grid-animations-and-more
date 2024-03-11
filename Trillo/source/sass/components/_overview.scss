@@ -10,7 +10,8 @@
 
   &__heading-and-location-container,
   &__rating-container {
-    padding: 1rem 2rem;
+    padding-block: calc(var(--space-around) / 2);
+    padding-inline: var(--space-around);
   }
 
   &__heading-and-location-container {

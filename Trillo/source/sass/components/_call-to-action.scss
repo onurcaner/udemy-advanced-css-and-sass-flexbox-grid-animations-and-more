@@ -1,0 +1,23 @@
+@use '../mixins/borders';
+@use '../mixins/flexes';
+@use '../mixins/typography';
+
+.call-to-action {
+  @include borders.top();
+  @include flexes.column-center();
+
+  padding: var(--space-around);
+
+  &__heading {
+    @include typography.call-to-action-heading();
+
+    margin-bottom: 2rem;
+  }
+
+  &__button {
+    @include flexes.column-center();
+
+    gap: 2rem;
+    height: calc(1em + var(--space-around));
+  }
+}

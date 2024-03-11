@@ -1,0 +1,43 @@
+@use '../mixins/flexes';
+@use '../mixins/focuses';
+@use '../mixins/shapes';
+@use '../mixins/typography';
+
+.button {
+  @include focuses.focus-visible(var(--color-primary));
+  @include typography.button();
+
+  padding-block: calc(var(--space-around) / 2);
+  padding-inline: calc(var(--space-around) * 2);
+  background-color: var(--color-primary);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary--light),
+    var(--color-primary--dark)
+  );
+  border-radius: 5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--speed-medium) ease-in-out;
+
+  &:hover {
+    box-shadow: var(--shadow-s--primary);
+  }
+}
+
+.button-with-double-lines {
+  @extend .button;
+
+  @include flexes.column-center();
+
+  gap: 5rem;
+  height: calc(1em + var(--space-around));
+
+  &__content {
+    transition: all var(--speed-medium) ease-in-out;
+  }
+
+  &:hover &__content {
+    translate: 0% calc(-1em - 5rem);
+  }
+}

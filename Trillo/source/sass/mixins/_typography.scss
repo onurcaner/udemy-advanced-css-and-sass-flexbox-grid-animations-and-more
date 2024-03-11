@@ -55,9 +55,9 @@
 }
 
 @mixin anchor {
-  font-size: inherit;
-  line-height: inherit;
-  font-weight: inherit;
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 400;
   color: var(--color-primary);
 
   &:hover {
@@ -73,11 +73,28 @@
   }
 }
 
+@mixin button {
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--color-white);
+}
+
 @mixin heading {
   font-size: 1.7rem;
   line-height: 1.2;
   font-weight: 300;
   text-transform: uppercase;
+  color: var(--color-grey--darker);
+}
+
+@mixin call-to-action-heading {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
   color: var(--color-grey--darker);
 }
 
@@ -110,7 +127,6 @@
 }
 
 @mixin add-underline {
-  padding-bottom: max(0.125rem, 2px);
   border-bottom: max(0.125rem, 2px) solid currentColor;
-  margin-bottom: calc(-1 * max(0.25rem, 4px));
+  margin-bottom: calc(-2 * max(0.125rem, 2px));
 }

@@ -30,25 +30,29 @@
             placeholder="Search hotels"
           />
           <button class="search__button" type="submit" aria-label="Search">
-            <svg class="search__icon" xmlns="http://www.w3.org/2000/svg">
-              <use
-                href="source/assets/icons/sprite.svg#icon-magnifying-glass"
-              />
-            </svg>
+            <span role="img" aria-label="Search icon">
+              <svg class="search__icon" xmlns="http://www.w3.org/2000/svg">
+                <use
+                  href="source/assets/icons/sprite.svg#icon-magnifying-glass"
+                />
+              </svg>
+            </span>
           </button>
         </form>
         <nav class="user-navigation">
           <button
             class="user-navigation__button"
             type="button"
-            aria-label="bookmarks"
+            aria-label="Bookmarks"
           >
-            <svg
-              class="user-navigation__icon"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use href="source/assets/icons/sprite.svg#icon-bookmark" />
-            </svg>
+            <span role="img" aria-label="Bookmarks icon">
+              <svg
+                class="user-navigation__icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use href="source/assets/icons/sprite.svg#icon-bookmark" />
+              </svg>
+            </span>
             <span
               class="user-navigation__notification-badge"
               aria-label="Number of bookmark notifications"
@@ -58,14 +62,16 @@
           <button
             class="user-navigation__button"
             type="button"
-            aria-label="messages"
+            aria-label="Messages"
           >
-            <svg
-              class="user-navigation__icon"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use href="source/assets/icons/sprite.svg#icon-chat" />
-            </svg>
+            <span role="img" aria-label="Messages icon">
+              <svg
+                class="user-navigation__icon"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use href="source/assets/icons/sprite.svg#icon-chat" />
+              </svg>
+            </span>
             <span
               class="user-navigation__notification-badge"
               aria-label="Number of message notifications"
@@ -158,37 +164,39 @@
         <!-- Main -->
         <main class="main">
           <!-- Gallery -->
-          <ul class="gallery">
-            <li>
-              <img
-                class="gallery__image"
-                src="source/assets/images/hotel-1.jpg"
-                alt="A serene night-time scene at a resort, showcasing a calm
+          <section>
+            <ul class="gallery">
+              <li>
+                <img
+                  class="gallery__image"
+                  src="source/assets/images/hotel-1.jpg"
+                  alt="A serene night-time scene at a resort, showcasing a calm
                 and illuminated swimming pool surrounded by palm trees, with the
                 warmly lit resort building in the background."
-              />
-            </li>
-            <li>
-              <img
-                class="gallery__image"
-                src="source/assets/images/hotel-2.jpg"
-                alt="A serene and inviting swimming pool area with clear blue
+                />
+              </li>
+              <li>
+                <img
+                  class="gallery__image"
+                  src="source/assets/images/hotel-2.jpg"
+                  alt="A serene and inviting swimming pool area with clear blue
                 water, surrounded by white umbrellas, lounge chairs, and modern
                 buildings under a partly cloudy sky."
-              />
-            </li>
-            <li>
-              <img
-                class="gallery__image"
-                src="source/assets/images/hotel-3.jpg"
-                alt="A serene and picturesque view from a terrace overlooking
+                />
+              </li>
+              <li>
+                <img
+                  class="gallery__image"
+                  src="source/assets/images/hotel-3.jpg"
+                  alt="A serene and picturesque view from a terrace overlooking
                 the ocean, with two chairs set for relaxation, surrounded by
                 lush greenery and the golden hue of a setting sun."
-              />
-            </li>
-          </ul>
+                />
+              </li>
+            </ul>
+          </section>
           <!-- Overview -->
-          <div class="overview">
+          <section class="overview">
             <div class="overview__heading-and-location-container">
               <div class="overview__heading-and-stars-container">
                 <h2 class="overview__heading">Hotel Las Palmas</h2>
@@ -257,11 +265,11 @@
               </span>
               <p class="overview__votes">429 votes</p>
             </div>
-          </div>
+          </section>
           <!-- Details -->
           <div class="details">
             <!-- Left -->
-            <div class="description-features-recommend-container">
+            <section class="description-features-recommend-container">
               <div class="description">
                 <p class="description__paragraph">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -433,9 +441,9 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </section>
             <!-- Right -->
-            <div class="user-reviews-container">
+            <section class="user-reviews-container">
               <ul class="user-review-list">
                 <li>
                   <figure class="review">
@@ -494,7 +502,21 @@
               <a class="anchor" href="#" aria-details="Show all reviews"
                 >Show all</a
               >
-            </div>
+            </section>
+          </div>
+          <!-- Call to Action -->
+          <div class="call-to-action">
+            <h3 class="call-to-action__heading">
+              Good news!
+              <br />
+              We have 4 free rooms for your selected dates!
+            </h3>
+            <a class="button-with-double-lines" href="#"
+              ><span class="button-with-double-lines__content">Book now</span
+              ><span class="button-with-double-lines__content"
+                >Only 4 rooms left</span
+              ></a
+            >
           </div>
         </main>
       </div>

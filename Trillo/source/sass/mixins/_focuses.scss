@@ -1,9 +1,24 @@
+@mixin _not-focused {
+  outline: transparent solid max(0.1875rem, 3px);
+}
+
+@mixin _focused($outline-color) {
+  outline-color: $outline-color;
+  outline-offset: 0.25rem;
+}
+
 @mixin focus-visible($outline-color) {
-  outline: $outline-color solid max(0.125rem, 2px);
-  outline-color: transparent;
+  @include _not-focused();
 
   &:focus-visible {
-    outline-color: $outline-color;
-    outline-offset: 0.25rem;
+    @include _focused($outline-color);
+  }
+}
+
+@mixin focus-within($outline-color) {
+  @include _not-focused();
+
+  &:focus-within {
+    @include _focused($outline-color);
   }
 }
