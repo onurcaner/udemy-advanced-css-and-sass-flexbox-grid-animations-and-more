@@ -1,3 +1,5 @@
+@use '../variables/breakpoints';
+
 @use '../mixins/flexes';
 @use '../mixins/focuses';
 @use '../mixins/positions';
@@ -17,8 +19,10 @@
   &__item {
     @include focuses.focus-within(var(--color-primary));
 
+    flex: auto;
     position: relative;
 
+    // Background
     &::before {
       @include positions.absolute-align();
 
@@ -79,6 +83,43 @@
     &:focus-visible,
     &--active {
       color: var(--color-white);
+    }
+  }
+}
+
+/* Queries */
+@media (width <= breakpoints.$l) {
+  .navigation {
+    &__list {
+      flex-direction: row;
+    }
+
+    &__anchor {
+      flex-direction: column;
+
+      gap: 0.5rem;
+
+      &::after {
+        content: unset;
+      }
+    }
+  }
+}
+
+@media (width <= breakpoints.$xs) {
+  .navigation {
+    &__list {
+      flex-direction: column;
+    }
+
+    &__anchor {
+      flex-direction: row;
+
+      gap: 2rem;
+
+      &::after {
+        content: '';
+      }
     }
   }
 }

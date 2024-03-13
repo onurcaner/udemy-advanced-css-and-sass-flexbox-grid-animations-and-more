@@ -1,10 +1,19 @@
 @use '../variables/breakpoints';
+
 @use '../mixins/flexes';
 
 .app-container {
   @include flexes.column-center();
 
   padding: calc(var(--space-around) * 2);
+
+  @media (width <= breakpoints.$l) {
+    padding: var(--space-around);
+  }
+
+  @media (width <= breakpoints.$s) {
+    padding: 0;
+  }
 }
 
 .app {
@@ -14,4 +23,8 @@
 
 .sidebar-and-main-container {
   @include flexes.row-stretch();
+
+  @media (width <= breakpoints.$l) {
+    flex-direction: column;
+  }
 }

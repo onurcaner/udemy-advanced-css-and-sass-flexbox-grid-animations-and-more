@@ -1,5 +1,7 @@
 @use 'sass:math';
 
+@use '../variables/breakpoints';
+
 @use '../mixins/borders';
 @use '../mixins/flexes';
 
@@ -23,5 +25,22 @@
 
   &:has(:focus-visible) {
     width: 50%;
+  }
+}
+
+@media (width <= breakpoints.$s) {
+  .header {
+    flex-wrap: wrap;
+    row-gap: calc(var(--space-around) / 4);
+  }
+
+  .header .search {
+    order: 1;
+    margin-inline: calc(var(--space-around) * -1);
+
+    &,
+    &:has(:focus-visible) {
+      width: calc(100% + var(--space-around) * 2);
+    }
   }
 }

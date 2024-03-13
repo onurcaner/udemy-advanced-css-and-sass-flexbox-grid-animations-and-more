@@ -1,3 +1,5 @@
+@use '../variables/breakpoints';
+
 @use '../mixins/flexes';
 @use '../mixins/focuses';
 @use '../mixins/positions';
@@ -43,5 +45,18 @@
     @include shapes.circle(1.5rem);
 
     fill: currentColor;
+  }
+}
+
+@media (width <= breakpoints.$s) {
+  .search {
+    &__input {
+      padding-inline: var(--space-around);
+      border-radius: 0;
+    }
+
+    &__button {
+      right: var(--space-around);
+    }
   }
 }

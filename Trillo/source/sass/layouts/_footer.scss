@@ -5,4 +5,9 @@
   visibility: hidden;
   padding-block: var(--space-around);
   background-color: var(--color-grey--darkest);
+
+  @media (width <= breakpoints.$l) {
+    display: block;
+    visibility: visible;
+  }
 }

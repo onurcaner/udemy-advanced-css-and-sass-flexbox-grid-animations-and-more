@@ -1,10 +1,37 @@
+@use '../variables/breakpoints';
+
 @use '../mixins/flexes';
 
 .gallery {
   width: 100%;
   @include flexes.row();
 
+  &__item {
+    transition: all var(--speed-medium) ease-in-out;
+  }
+
   &__image {
     width: 100%;
+  }
+}
+
+@media (width <= breakpoints.$xs) {
+  .gallery {
+    flex-direction: column;
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: -30vw;
+      }
+
+      &:nth-child(2) {
+        z-index: 1;
+      }
+
+      &:hover {
+        z-index: 2;
+        box-shadow: var(--shadow-m);
+      }
+    }
   }
 }

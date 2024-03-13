@@ -1,3 +1,5 @@
+@use '../variables/breakpoints';
+
 @use '../mixins/borders';
 @use '../mixins/cards';
 @use '../mixins/flexes';
@@ -8,6 +10,15 @@
   gap: var(--space-column-gap);
   padding: var(--space-around);
   background-color: var(--color-grey--lightest);
+
+  @media (width <= breakpoints.$m) {
+    gap: calc(var(--space-column-gap) * 2);
+    flex-direction: column;
+  }
+
+  @media (width <= breakpoints.$xs) {
+    padding-inline: 0;
+  }
 }
 
 // Left
@@ -37,4 +48,5 @@
   @include flexes.column();
 
   gap: var(--space-column-gap);
+  width: 100%;
 }

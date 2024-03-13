@@ -1,4 +1,5 @@
-@use '../variables//breakpoints';
+@use '../variables/breakpoints';
+
 @use '../mixins/flexes';
 
 .sidebar {
@@ -7,12 +8,29 @@
   justify-content: space-between;
   padding-block: var(--space-around);
   background-color: var(--color-grey--darkest);
+
+  @media (width <= breakpoints.$l) {
+    padding: 0 var(--space-around);
+
+    .copyright-text {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  @media (width <= breakpoints.$s) {
+    padding: 0;
+  }
+
+  @media (width <= breakpoints.$xs) {
+    padding-block: calc(var(--space-around) / 4);
+  }
 }
 
 .navigation {
-  flex: initial;
+  flex-basis: auto;
 }
 
 .copyright-text {
-  flex: initial;
+  flex-basis: auto;
 }
