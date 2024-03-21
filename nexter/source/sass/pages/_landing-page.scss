@@ -1,0 +1,16 @@
+@use '../variables/lengths';
+
+.landing-page {
+  display: grid;
+  grid-template-columns: auto 1fr; // sidebar not-sidebar
+
+  .main {
+    display: grid;
+    justify-content: center;
+  }
+
+  .features-section {
+    padding-inline: 4rem;
+    max-width: lengths.$max-width;
+  }
+}

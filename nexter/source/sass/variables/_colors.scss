@@ -1,0 +1,12 @@
+@use 'sass:color';
+
+$primary: #c69963;
+$primary-dark: #b28451;
+
+$secondary: #101d2c;
+
+$grey-lighter: #f9f7f6;
+$grey-light: #aaa;
+$grey-dark: #6d5d4b;
+$grey-darker: #54483a;
+$grey: color.mix($grey-light, $grey-dark, $weight: 50%);

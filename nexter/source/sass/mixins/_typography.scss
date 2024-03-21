@@ -1,0 +1,38 @@
+@use '../variables/colors';
+@use '../variables/fonts';
+
+@mixin content-heading {
+  font-family: fonts.$display;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 0.02ch;
+  font-weight: 400;
+  color: colors.$grey-darker;
+}
+
+@mixin content-text {
+  font-family: fonts.$primary;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.04ch;
+  font-weight: 300;
+  color: colors.$grey-darker;
+}
+
+@mixin heading-long {
+  font-family: fonts.$display;
+  font-size: 2.25rem;
+  line-height: 3rem;
+  font-weight: 500;
+  color: colors.$grey-darker;
+}
+
+@mixin heading-short {
+  font-family: fonts.$primary;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 0.04ch;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: colors.$grey-dark;
+}

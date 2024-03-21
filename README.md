@@ -20,7 +20,7 @@ Offered at: [Udemy](https://www.udemy.com/)
 
 - Notes: Floats are used to place elements on the page.
 
-### 1. Trillo App Page
+### 2. Trillo App Page
 
 - Description: Hotel page of the 'Trillo' app.
 
@@ -31,3 +31,15 @@ Offered at: [Udemy](https://www.udemy.com/)
 - Code: [This Repository / Trillo](./Trillo)
 
 - Notes: Flexbox is used to place elements on the page.
+
+### 3. Nexter Landing Page
+
+- Description: Homepage of the 'nexter'.
+
+- Requirements: None
+
+- Environment: Driven by Node, displayed in browser
+
+- Code: [This Repository / nexter](./nexter)
+
+- Notes: Grid is used to place elements on the page.

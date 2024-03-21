@@ -1,0 +1,10 @@
+@mixin square($length) {
+  width: $length;
+  height: $length;
+}
+
+@mixin circle($length) {
+  @include square($length);
+
+  border-radius: 50%;
+}
