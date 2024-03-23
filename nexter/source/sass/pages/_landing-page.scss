@@ -10,7 +10,11 @@
   }
 
   .features-section {
-    padding-inline: 4rem;
     max-width: lengths.$max-width;
+    padding-inline: 4rem;
+    margin-bottom: 10rem;
+  }
+
+  .story-section {
   }
 }

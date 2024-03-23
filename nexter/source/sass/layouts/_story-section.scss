@@ -1,0 +1,7 @@
+@use '../variables/colors';
+
+.story-section {
+  background-color: colors.$grey-lighter;
+  display: grid;
+  grid-template-rows: repeat(1, minmax(auto, 80dvh));
+}
