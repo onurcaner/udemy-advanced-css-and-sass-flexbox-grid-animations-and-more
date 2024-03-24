@@ -6,7 +6,7 @@
 
   .main {
     display: grid;
-    justify-content: center;
+    justify-items: center;
   }
 
   .features-section {
@@ -16,5 +16,13 @@
   }
 
   .story-section {
+    width: 100%;
+    margin-bottom: 10rem;
+  }
+
+  .houses-section {
+    max-width: lengths.$max-width;
+    padding-inline: 4rem;
+    margin-bottom: 10rem;
   }
 }

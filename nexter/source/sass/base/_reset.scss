@@ -9,3 +9,25 @@
 html {
   box-sizing: border-box;
 }
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+ol,
+ul {
+  list-style: none;
+}

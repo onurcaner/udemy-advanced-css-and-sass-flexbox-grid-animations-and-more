@@ -1,7 +1,7 @@
 @use '../variables/colors';
 @use '../variables/fonts';
 
-@mixin content-heading {
+@mixin content-title {
   font-family: fonts.$display;
   font-size: 1.25rem;
   line-height: 2rem;
@@ -10,30 +10,52 @@
   color: colors.$grey-darker;
 }
 
+@mixin house-title {
+  @include content-title();
+
+  text-transform: capitalize;
+  color: colors.$grey-lighter;
+  background-color: colors.$secondary;
+}
+
 @mixin content-text {
   font-family: fonts.$primary;
   font-size: 1rem;
   line-height: 1.7rem;
   letter-spacing: 0.04ch;
   font-weight: 300;
-  max-width: 80ch;
+  max-width: 70ch;
   color: colors.$grey-darker;
 }
 
 @mixin heading-long {
   font-family: fonts.$display;
-  font-size: 2.25rem;
-  line-height: 3rem;
-  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -0.06ch;
+  font-weight: 400;
   color: colors.$grey-darker;
 }
 
 @mixin heading-short {
   font-family: fonts.$primary;
-  font-size: 1.25rem;
-  line-height: 2rem;
+  font-size: 1rem;
+  line-height: 1.7rem;
   letter-spacing: 0.04ch;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
-  color: colors.$grey-dark;
+  color: colors.$primary;
+}
+
+@mixin button {
+  @include content-text();
+
+  font-weight: 400;
+  text-transform: uppercase;
+  color: colors.$grey-lighter;
+  background-color: colors.$primary;
+
+  &:hover {
+    background-color: colors.$primary-dark;
+  }
 }

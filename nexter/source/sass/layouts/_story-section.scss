@@ -1,7 +1,16 @@
+@use 'sass:math';
+
 @use '../variables/colors';
+@use '../variables/lengths';
 
 .story-section {
   background-color: colors.$grey-lighter;
   display: grid;
-  grid-template-rows: repeat(1, minmax(auto, 80dvh));
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, minmax(auto, 95dvh));
+  column-gap: 4rem;
+
+  .testimonial {
+    max-width: math.div(lengths.$max-width, 2);
+  }
 }

@@ -1,0 +1,8 @@
+@mixin focus-visible($color) {
+  outline: transparent solid 2px;
+
+  &:focus-visible {
+    outline-offset: 2px;
+    outline-color: $color;
+  }
+}

@@ -1,0 +1,77 @@
+@use '../variables/colors';
+@use '../variables/durations';
+@use '../variables/lengths';
+
+@use '../mixins/cards';
+@use '../mixins/focuses';
+@use '../mixins/images';
+@use '../mixins/shapes';
+@use '../mixins/typography';
+
+.house {
+  @include cards.house();
+
+  position: relative;
+  display: grid;
+  background-color: colors.$grey-lighter;
+
+  &__image {
+    @include images.make-background();
+
+    height: 20rem;
+  }
+
+  &__title {
+    @include typography.house-title();
+
+    justify-self: center;
+    padding: 1em 2em;
+    border-radius: lengths.$border-radius;
+    translate: 0 -50%;
+    margin-bottom: -1.85em;
+  }
+
+  .properties-list {
+    padding: 4rem 4rem;
+    row-gap: 2.5rem;
+    column-gap: 3.4rem;
+  }
+
+  .button {
+    text-align: center;
+    border-radius: 0;
+  }
+
+  &__favorite-button {
+    @include focuses.focus-visible(colors.$primary);
+    @include shapes.square(2.5rem);
+
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 1;
+    display: grid;
+    padding: 0.125rem;
+  }
+
+  &__heart-svg {
+    @include shapes.square(100%);
+
+    z-index: 2;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    fill: colors.$primary;
+    transition: all durations.$normal ease-in-out;
+
+    &--filled {
+      z-index: 1;
+      scale: 1.125;
+      fill: colors.$grey-lighter;
+    }
+  }
+
+  &__favorite-button:hover &__heart-svg--filled,
+  &__favorite-button:focus-visible &__heart-svg--filled {
+    fill: colors.$primary;
+  }
+}
