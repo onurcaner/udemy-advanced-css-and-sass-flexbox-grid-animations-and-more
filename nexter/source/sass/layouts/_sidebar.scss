@@ -1,7 +1,13 @@
 @use '../variables/colors';
 
 .sidebar {
-  background-color: colors.$primary;
-  width: 5rem;
   height: 100%;
+  padding: 1rem;
+  width: 2 * 1rem + 3.4rem;
+  background-color: colors.$primary;
+
+  .navigation-button {
+    position: fixed;
+    font-size: 3.4rem;
+  }
 }

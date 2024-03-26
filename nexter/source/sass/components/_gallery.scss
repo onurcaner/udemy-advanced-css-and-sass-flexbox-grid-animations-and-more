@@ -1,0 +1,65 @@
+@use '../variables/lengths';
+
+@use '../mixins/images';
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 10vw;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  grid-auto-flow: dense;
+
+  &__item {
+    &--span--1x1 {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+
+    &--span--2x1 {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+
+    &--span--3x1 {
+      grid-column: span 3;
+      grid-row: span 1;
+    }
+
+    &--span--1x2 {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+
+    &--span--2x2 {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    &--span--3x2 {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
+
+    &--span--1x3 {
+      grid-column: span 1;
+      grid-row: span 3;
+    }
+
+    &--span--2x3 {
+      grid-column: span 2;
+      grid-row: span 3;
+    }
+
+    &--span--3x3 {
+      grid-column: span 3;
+      grid-row: span 3;
+    }
+  }
+
+  &__image {
+    @include images.make-background();
+
+    border-radius: lengths.$border-radius;
+  }
+}

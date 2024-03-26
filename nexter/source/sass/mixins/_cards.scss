@@ -8,11 +8,9 @@
   padding: 4rem;
   border-radius: lengths.$border-radius;
   border: 1px solid color.change(colors.$primary, $alpha: 0.1);
-  overflow: hidden;
 }
 
 @mixin house {
   border-radius: lengths.$border-radius;
-  overflow: hidden;
   box-shadow: shadows.$md;
 }

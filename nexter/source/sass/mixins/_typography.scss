@@ -1,5 +1,12 @@
+@use 'sass:color';
+
 @use '../variables/colors';
 @use '../variables/fonts';
+
+@mixin underline {
+  border-bottom: 1px solid currentColor;
+  margin-bottom: -1px;
+}
 
 @mixin content-title {
   font-family: fonts.$display;
@@ -58,4 +65,31 @@
   &:hover {
     background-color: colors.$primary-dark;
   }
+}
+
+@mixin footer-link {
+  font-family: fonts.$display;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 0.02ch;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: color.mix(colors.$secondary, #fff, $weight: 10%);
+  background-color: colors.$secondary;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+@mixin copyright-text {
+  font-family: fonts.$primary;
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.05ch;
+  font-weight: 300;
+  max-width: 70ch;
+  text-align: center;
+  color: color.mix(colors.$secondary, #fff, $weight: 10%);
+  background-color: colors.$secondary;
 }

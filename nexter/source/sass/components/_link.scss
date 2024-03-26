@@ -1,0 +1,14 @@
+@use '../variables/durations';
+@use '../variables/lengths';
+
+@use '../mixins/focuses';
+@use '../mixins/typography';
+
+.link {
+  @include focuses.focus-visible(currentColor);
+  @include typography.underline();
+
+  padding-inline: 0.25em;
+  border-radius: lengths.$border-radius;
+  transition: all durations.$normal ease-in-out;
+}

@@ -19,6 +19,8 @@
     @include images.make-background();
 
     height: 20rem;
+    border-top-left-radius: lengths.$border-radius;
+    border-top-right-radius: lengths.$border-radius;
   }
 
   &__title {
@@ -39,7 +41,8 @@
 
   .button {
     text-align: center;
-    border-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   &__favorite-button {
@@ -52,6 +55,7 @@
     z-index: 1;
     display: grid;
     padding: 0.125rem;
+    border-radius: lengths.$border-radius;
   }
 
   &__heart-svg {

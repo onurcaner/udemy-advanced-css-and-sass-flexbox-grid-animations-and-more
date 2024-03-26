@@ -1,0 +1,35 @@
+@use '../variables/colors';
+@use '../variables/lengths';
+
+@use '../mixins/typography';
+
+.footer {
+  display: grid;
+  justify-items: center;
+  background-color: colors.$secondary;
+  padding: 8rem 4rem;
+
+  &__nav {
+    max-width: lengths.$max-width;
+    margin-bottom: 10rem;
+  }
+
+  &__nav-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    row-gap: 2.5rem;
+    column-gap: 4rem;
+  }
+
+  .link {
+    @include typography.footer-link();
+
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  &__copyright-text {
+    @include typography.copyright-text();
+  }
+}
