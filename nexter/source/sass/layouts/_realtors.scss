@@ -1,0 +1,23 @@
+@use '../variables/colors';
+
+@use '../mixins/typography';
+
+.realtors {
+  display: grid;
+  justify-items: center;
+  padding: 4rem 8rem;
+  background-color: colors.$secondary;
+
+  &__heading {
+    @include typography.heading-short();
+
+    align-self: end;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: grid;
+    align-content: start;
+    row-gap: 2.5rem;
+  }
+}

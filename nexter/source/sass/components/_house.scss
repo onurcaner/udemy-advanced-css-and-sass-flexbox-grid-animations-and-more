@@ -16,7 +16,7 @@
   background-color: colors.$grey-lighter;
 
   &__image {
-    @include images.make-background();
+    @include images.make-cover();
 
     height: 20rem;
     border-top-left-radius: lengths.$border-radius;
@@ -24,7 +24,7 @@
   }
 
   &__title {
-    @include typography.house-title();
+    @include typography.title-house();
 
     justify-self: center;
     padding: 1em 2em;

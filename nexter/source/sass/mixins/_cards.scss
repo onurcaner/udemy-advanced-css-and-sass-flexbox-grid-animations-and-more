@@ -4,13 +4,21 @@
 @use '../variables/lengths';
 @use '../variables/shadows';
 
-@mixin basic {
-  padding: 4rem;
+@mixin _card {
+  width: 100%;
+  height: 100%;
   border-radius: lengths.$border-radius;
+}
+
+@mixin basic {
+  @include _card();
+
+  padding: 4rem;
   border: 1px solid color.change(colors.$primary, $alpha: 0.1);
 }
 
 @mixin house {
-  border-radius: lengths.$border-radius;
+  @include _card();
+
   box-shadow: shadows.$md;
 }

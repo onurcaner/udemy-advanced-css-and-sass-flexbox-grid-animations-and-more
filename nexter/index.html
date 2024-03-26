@@ -18,16 +18,130 @@
   </head>
   <body class="landing-page">
     <div class="sidebar">
-      <button class="navigation-button" type="menu">
+      <button
+        class="navigation-button"
+        type="menu"
+        aria-label="Toggle navigation"
+      >
         <span class="navigation-button__span"></span>
         <span class="navigation-button__span"></span>
         <span class="navigation-button__span"></span>
       </button>
     </div>
-    <div class="not-sidebar">
+    <div>
       <div class="header-and-realtors-container">
-        <header></header>
-        <aside></aside>
+        <!-- Hero -->
+        <header class="hero-header">
+          <div class="hero-header__content-container">
+            <img
+              class="hero-header__logo-image"
+              src="logo.png"
+              alt="logo"
+              width="455"
+              height="100"
+            />
+            <div class="hero-header__text-container">
+              <h1 class="hero-header__hero-heading">
+                The ultimate personal freedom
+              </h1>
+              <h3 class="hero-header__short-heading">Your own home</h3>
+              <a href="#" class="button">View our properties</a>
+            </div>
+            <div class="as-seen-on">
+              <p class="as-seen-on__text">As seen on</p>
+              <ul class="as-seen-on__logo-list">
+                <li>
+                  <img
+                    class="as-seen-on__image"
+                    src="logo-bbc.png"
+                    alt="dgfdfg"
+                    width="351"
+                    height="100"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="as-seen-on__image"
+                    src="logo-bi.png"
+                    alt="dgfdfg"
+                    width="247"
+                    height="100"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="as-seen-on__image"
+                    src="logo-forbes.png"
+                    alt="dgfdfg"
+                    width="405"
+                    height="100"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="as-seen-on__image"
+                    src="logo-techcrunch.png"
+                    alt="dgfdfg"
+                    width="737"
+                    height="100"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <img
+            class="hero-header__background-image"
+            src="hero.jpeg"
+            alt="asd"
+            width="1500"
+            height="1012"
+          />
+        </header>
+        <!-- Realtors -->
+        <aside class="realtors">
+          <h3 class="realtors__heading">Top 3 realtors</h3>
+          <ul class="realtors__list">
+            <li>
+              <div class="realtor">
+                <img
+                  class="realtor__image"
+                  src="realtor-1.jpeg"
+                  alt="asd"
+                  width="500"
+                  height="500"
+                />
+                <h4 class="realtor__title">Erik Feinman</h4>
+                <p class="realtor__text">Sold 284 houses</p>
+              </div>
+            </li>
+            <li>
+              <div class="realtor">
+                <img
+                  class="realtor__image"
+                  src="realtor-2.jpeg"
+                  alt="asd"
+                  width="500"
+                  height="500"
+                />
+                <h4 class="realtor__title">Anna Brown</h4>
+                <p class="realtor__text">Sold 244 houses</p>
+              </div>
+            </li>
+            <li>
+              <div class="realtor">
+                <img
+                  class="realtor__image"
+                  src="realtor-3.jpeg"
+                  alt="asd"
+                  width="500"
+                  height="500"
+                />
+                <h4 class="realtor__title">Toby Ramsey</h4>
+                <p class="realtor__text">Sold 211 houses</p>
+              </div>
+            </li>
+          </ul>
+        </aside>
       </div>
       <main class="main">
         <!-- Features Section -->

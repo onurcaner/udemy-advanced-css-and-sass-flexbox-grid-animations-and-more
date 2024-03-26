@@ -2,9 +2,16 @@
 
 .landing-page {
   display: grid;
-  grid-template-columns: auto 1fr; // sidebar not-sidebar
+  grid-template-columns: min-content 1fr; // sidebar not-sidebar
+
+  .header-and-realtors-container {
+    display: grid;
+    grid-template-columns: minmax(max-content, 1fr) max-content;
+    margin-bottom: 10rem;
+  }
 
   .main {
+    margin-top: 10rem;
     display: grid;
     justify-items: center;
   }
@@ -17,7 +24,7 @@
 
   .story-section {
     width: 100%;
-    margin-bottom: 10rem;
+    margin-bottom: 12rem;
   }
 
   .houses-section {

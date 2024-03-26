@@ -8,40 +8,26 @@
   margin-bottom: -1px;
 }
 
-@mixin content-title {
+//
+// Headings
+@mixin heading-hero {
   font-family: fonts.$display;
-  font-size: 1.25rem;
-  line-height: 2rem;
-  letter-spacing: 0.02ch;
+  font-size: 3.4rem;
+  line-height: 4rem;
+  letter-spacing: -0.07ch;
   font-weight: 400;
-  color: colors.$grey-darker;
-}
-
-@mixin house-title {
-  @include content-title();
-
-  text-transform: capitalize;
   color: colors.$grey-lighter;
-  background-color: colors.$secondary;
-}
-
-@mixin content-text {
-  font-family: fonts.$primary;
-  font-size: 1rem;
-  line-height: 1.7rem;
-  letter-spacing: 0.04ch;
-  font-weight: 300;
-  max-width: 70ch;
-  color: colors.$grey-darker;
+  margin-bottom: 2rem;
 }
 
 @mixin heading-long {
   font-family: fonts.$display;
   font-size: 2.5rem;
-  line-height: 1;
+  line-height: 3rem;
   letter-spacing: -0.06ch;
   font-weight: 400;
   color: colors.$grey-darker;
+  margin-bottom: 1.5rem;
 }
 
 @mixin heading-short {
@@ -52,10 +38,77 @@
   font-weight: 500;
   text-transform: uppercase;
   color: colors.$primary;
+  margin-bottom: 0.625rem;
 }
 
+//
+// Titles
+@mixin title-content {
+  font-family: fonts.$display;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 0.02ch;
+  font-weight: 400;
+  color: colors.$grey-darker;
+}
+
+@mixin text-as-seen-on {
+  @include heading-short();
+
+  text-transform: none;
+  color: colors.$grey-light;
+}
+
+@mixin title-house {
+  @include title-content();
+
+  text-transform: capitalize;
+  color: color.mix(colors.$secondary, colors.$grey-lighter, $weight: 10%);
+  background-color: colors.$secondary;
+}
+
+@mixin title-realtor {
+  @include title-content();
+
+  color: color.mix(colors.$secondary, colors.$grey-lighter, $weight: 10%);
+  background-color: colors.$secondary;
+}
+
+//
+// Texts
+@mixin text-content {
+  font-family: fonts.$primary;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.04ch;
+  font-weight: 300;
+  max-width: 70ch;
+  color: colors.$grey-darker;
+}
+
+@mixin text-copyright {
+  font-family: fonts.$primary;
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.05ch;
+  font-weight: 300;
+  max-width: 70ch;
+  text-align: center;
+  color: color.mix(colors.$secondary, colors.$grey-lighter, $weight: 20%);
+  background-color: colors.$secondary;
+}
+
+@mixin text-realtor {
+  @include text-content();
+
+  color: color.mix(colors.$secondary, colors.$grey-lighter, $weight: 20%);
+  background-color: colors.$secondary;
+}
+
+//
+// Others
 @mixin button {
-  @include content-text();
+  @include text-content();
 
   font-weight: 400;
   text-transform: uppercase;
@@ -67,29 +120,15 @@
   }
 }
 
-@mixin footer-link {
-  font-family: fonts.$display;
-  font-size: 1.25rem;
-  line-height: 2rem;
-  letter-spacing: 0.02ch;
+@mixin link-footer {
+  @include title-content();
+
   font-weight: 300;
   text-transform: uppercase;
-  color: color.mix(colors.$secondary, #fff, $weight: 10%);
+  color: color.mix(colors.$secondary, colors.$grey-lighter, $weight: 10%);
   background-color: colors.$secondary;
 
   &:hover {
-    color: #fff;
+    color: colors.$grey-lighter;
   }
-}
-
-@mixin copyright-text {
-  font-family: fonts.$primary;
-  font-size: 0.85rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.05ch;
-  font-weight: 300;
-  max-width: 70ch;
-  text-align: center;
-  color: color.mix(colors.$secondary, #fff, $weight: 10%);
-  background-color: colors.$secondary;
 }

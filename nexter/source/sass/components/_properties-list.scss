@@ -10,7 +10,7 @@
   column-gap: 2rem;
 
   &__property {
-    @include typography.content-text();
+    @include typography.text-content();
 
     display: grid;
     grid-template-columns: min-content 1fr;

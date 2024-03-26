@@ -1,0 +1,57 @@
+@use '../variables/colors';
+
+@use '../mixins/images';
+@use '../mixins/typography';
+
+.hero-header {
+  position: relative;
+  display: grid;
+  min-height: 100dvh;
+  background-color: colors.$secondary;
+
+  &__background-image {
+    @include images.make-cover();
+
+    position: absolute;
+    opacity: 0.1;
+  }
+
+  &__content-container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 8rem;
+    padding: 4rem 8rem;
+  }
+
+  &__logo-image {
+    height: 2rem;
+    justify-self: center;
+  }
+
+  &__text-container {
+    align-self: center;
+    display: grid;
+    justify-items: start;
+  }
+
+  // inside &__text-container
+  &__hero-heading {
+    @include typography.heading-hero();
+
+    grid-row: 2 / 3;
+  }
+
+  // inside &__text-container
+  &__short-heading {
+    @include typography.heading-short();
+
+    grid-row: 1 / 2;
+  }
+
+  // inside &__text-container
+  .button {
+    grid-row: 3 / 4;
+  }
+}

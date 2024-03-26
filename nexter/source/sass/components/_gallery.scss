@@ -58,7 +58,7 @@
   }
 
   &__image {
-    @include images.make-background();
+    @include images.make-cover();
 
     border-radius: lengths.$border-radius;
   }

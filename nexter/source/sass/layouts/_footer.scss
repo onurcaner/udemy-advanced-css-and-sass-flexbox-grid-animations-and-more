@@ -23,13 +23,13 @@
   }
 
   .link {
-    @include typography.footer-link();
+    @include typography.link-footer();
 
     border-bottom: none;
     margin-bottom: 0;
   }
 
   &__copyright-text {
-    @include typography.copyright-text();
+    @include typography.text-copyright();
   }
 }
