@@ -3,14 +3,50 @@
 @use '../variables/colors';
 @use '../variables/lengths';
 
+@use '../mixins/paddings';
+
 .story-section {
   background-color: colors.$grey-lighter;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, minmax(auto, 95dvh));
+  grid-template-rows: repeat(1, minmax(min-content, 80dvh));
   column-gap: 4rem;
 
   .testimonial {
+    @include paddings.inline-responsive();
+
     max-width: math.div(lengths.$max-width, 2);
+  }
+
+  .stacked-images {
+    padding: 8rem;
+
+    &__image {
+      object-position: left;
+    }
+  }
+
+  @media (width <= 110em) {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: unset;
+    column-gap: 0;
+
+    .stacked-images {
+      padding: 4rem;
+    }
+  }
+
+  @media (width <= 70em) {
+    .stacked-images {
+      padding: 0rem;
+    }
+  }
+
+  @media (width <= 60em) {
+    grid-template-columns: 1fr;
+
+    .stacked-images {
+      display: none;
+    }
   }
 }

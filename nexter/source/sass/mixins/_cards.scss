@@ -4,6 +4,8 @@
 @use '../variables/lengths';
 @use '../variables/shadows';
 
+@use '../mixins/paddings';
+
 @mixin _card {
   width: 100%;
   height: 100%;
@@ -12,8 +14,9 @@
 
 @mixin basic {
   @include _card();
+  @include paddings.inline-responsive();
 
-  padding: 4rem;
+  padding-block: 4rem;
   border: 1px solid color.change(colors.$primary, $alpha: 0.1);
 }
 

@@ -62,4 +62,22 @@
 
     border-radius: lengths.$border-radius;
   }
+
+  @media (width <= 50em) {
+    grid-template-columns: repeat(2, 1fr);
+
+    &__item {
+      grid-row: span 2;
+      grid-column: unset;
+    }
+  }
+
+  @media (width <= 35em) {
+    grid-template-columns: repeat(1, 1fr);
+
+    &__item {
+      grid-row: span 3;
+      grid-column: unset;
+    }
+  }
 }

@@ -1,6 +1,8 @@
 @use '../mixins/typography';
 
 .as-seen-on {
+  overflow-x: auto;
+
   &__text {
     @include typography.text-as-seen-on();
 
@@ -16,7 +18,6 @@
     content: '';
     display: inline-block;
     height: 2px;
-    width: 100%;
     background-color: currentColor;
   }
 

@@ -5,6 +5,7 @@
 @use '../mixins/cards';
 @use '../mixins/focuses';
 @use '../mixins/images';
+@use '../mixins/paddings';
 @use '../mixins/shapes';
 @use '../mixins/typography';
 
@@ -34,7 +35,9 @@
   }
 
   .properties-list {
-    padding: 4rem 4rem;
+    @include paddings.inline-responsive();
+
+    padding-block: 4rem;
     row-gap: 2.5rem;
     column-gap: 3.4rem;
   }

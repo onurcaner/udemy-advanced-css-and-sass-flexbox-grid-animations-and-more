@@ -1,13 +1,25 @@
 @use '../variables/colors';
+@use '../variables/correlated-breakpoints';
+@use '../variables/shadows';
 
 .sidebar {
-  height: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 100dvh;
   padding: 1rem;
-  width: 2 * 1rem + 3.4rem;
   background-color: colors.$primary;
 
   .navigation-button {
-    position: fixed;
     font-size: 3.4rem;
+  }
+
+  @media (width <= correlated-breakpoints.$sidebar-goes-up) {
+    height: auto;
+    width: 100%;
+
+    .navigation-button {
+      margin-left: auto;
+    }
   }
 }

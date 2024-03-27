@@ -1,0 +1,21 @@
+@use '../variables/correlated-breakpoints';
+
+@mixin inline-responsive {
+  padding-inline: 4rem;
+
+  @media (width <= correlated-breakpoints.$padding-decreases) {
+    padding-inline: 2rem;
+  }
+}
+
+@mixin inline-thick-responsive {
+  padding-inline: 8rem;
+
+  @media (width <= correlated-breakpoints.$thick-padding-decreases) {
+    padding-inline: 4rem;
+  }
+
+  @media (width <= correlated-breakpoints.$padding-decreases) {
+    padding-inline: 2rem;
+  }
+}

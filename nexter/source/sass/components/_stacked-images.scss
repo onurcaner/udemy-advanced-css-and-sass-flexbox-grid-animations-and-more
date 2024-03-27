@@ -5,29 +5,22 @@
 @use '../mixins/images';
 
 .stacked-images {
+  padding: 4rem;
+  position: relative;
   display: grid;
-  width: 100%;
-  height: 100%;
   background-color: colors.$primary;
-
-  &__background-image,
-  &__image {
-    grid-row: 1 / -1;
-    grid-column: 1 / -1;
-  }
 
   &__background-image {
     @include images.make-cover();
 
+    position: absolute;
     opacity: 0.5;
   }
 
   &__image {
+    @include images.make-cover();
+
     z-index: 1;
-    width: calc(100% - 16rem);
-    justify-self: center;
-    align-self: center;
     border-radius: lengths.$border-radius;
-    box-shadow: shadows.$sm;
   }
 }

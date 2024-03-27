@@ -1,13 +1,24 @@
+@use '../variables/correlated-breakpoints';
 @use '../variables/lengths';
+
+@use '../mixins/paddings';
 
 .landing-page {
   display: grid;
   grid-template-columns: min-content 1fr; // sidebar not-sidebar
 
+  @media (width <= correlated-breakpoints.$sidebar-goes-up) {
+    grid-template-columns: unset;
+  }
+
   .header-and-realtors-container {
     display: grid;
     grid-template-columns: minmax(max-content, 1fr) max-content;
     margin-bottom: 10rem;
+
+    @media (width <= correlated-breakpoints.$realtors-go-down) {
+      grid-template-columns: unset;
+    }
   }
 
   .main {
@@ -17,8 +28,9 @@
   }
 
   .features-section {
+    @include paddings.inline-thick-responsive();
+
     max-width: lengths.$max-width;
-    padding-inline: 4rem;
     margin-bottom: 10rem;
   }
 
@@ -28,8 +40,9 @@
   }
 
   .houses-section {
+    @include paddings.inline-thick-responsive();
+
     max-width: lengths.$max-width;
-    padding-inline: 4rem;
     margin-bottom: 10rem;
   }
 

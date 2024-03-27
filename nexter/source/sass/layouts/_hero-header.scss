@@ -1,6 +1,8 @@
 @use '../variables/colors';
+@use '../variables/correlated-breakpoints';
 
 @use '../mixins/images';
+@use '../mixins/paddings';
 @use '../mixins/typography';
 
 .hero-header {
@@ -8,6 +10,10 @@
   display: grid;
   min-height: 100dvh;
   background-color: colors.$secondary;
+
+  @media (width<= correlated-breakpoints.$sidebar-goes-up) {
+    min-height: calc(100dvh - 5.4rem);
+  }
 
   &__background-image {
     @include images.make-cover();
@@ -17,12 +23,14 @@
   }
 
   &__content-container {
+    @include paddings.inline-thick-responsive();
+
     position: relative;
     z-index: 1;
     display: grid;
     grid-template-rows: auto 1fr auto;
     row-gap: 8rem;
-    padding: 4rem 8rem;
+    padding-block: 4rem;
   }
 
   &__logo-image {

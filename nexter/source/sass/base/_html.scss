@@ -1,3 +1,27 @@
 html {
-  font-size: 112.5%;
+  font-size: 125%;
+
+  @media (width <= 140em) {
+    font-size: 118.75%;
+  }
+
+  @media (width <= 120em) {
+    font-size: 112.5%;
+  }
+
+  @media (width <= 100em) {
+    font-size: 106.25%;
+  }
+
+  @media (width <= 80em) {
+    font-size: 100%;
+  }
+
+  @media (width <= 60em) {
+    font-size: 93.75%;
+  }
+
+  @media (width <= 40em) {
+    font-size: 87.5%;
+  }
 }

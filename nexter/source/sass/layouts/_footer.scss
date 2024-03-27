@@ -1,13 +1,16 @@
 @use '../variables/colors';
 @use '../variables/lengths';
 
+@use '../mixins/paddings';
 @use '../mixins/typography';
 
 .footer {
+  @include paddings.inline-thick-responsive();
+
   display: grid;
   justify-items: center;
   background-color: colors.$secondary;
-  padding: 8rem 4rem;
+  padding-block: 4rem;
 
   &__nav {
     max-width: lengths.$max-width;
@@ -20,6 +23,14 @@
     justify-items: center;
     row-gap: 2.5rem;
     column-gap: 4rem;
+
+    @media (width <= 90em) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (width <= 50em) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   .link {

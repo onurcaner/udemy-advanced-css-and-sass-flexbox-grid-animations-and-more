@@ -11,7 +11,6 @@
   grid-template-columns: auto 1fr;
   grid-template-rows: min-content auto;
   column-gap: 2.5rem;
-  row-gap: 1rem;
 
   &__svg-container {
     @include shapes.square(2.5rem);
@@ -39,5 +38,21 @@
 
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+  }
+
+  @media (width <= 40em) {
+    grid-template-columns: unset;
+
+    &__svg-container,
+    &__heading,
+    &__text {
+      grid-row: unset;
+      grid-column: unset;
+    }
+
+    &__svg-container {
+      translate: -50% -50%;
+      margin-bottom: 0.5rem;
+    }
   }
 }

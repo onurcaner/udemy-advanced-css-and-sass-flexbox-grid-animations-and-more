@@ -1,11 +1,15 @@
 @use '../variables/colors';
+@use '../variables/correlated-breakpoints';
 
+@use '../mixins/paddings';
 @use '../mixins/typography';
 
 .realtors {
+  @include paddings.inline-thick-responsive();
+
   display: grid;
   justify-items: center;
-  padding: 4rem 8rem;
+  padding-block: 4rem;
   background-color: colors.$secondary;
 
   &__heading {
@@ -19,5 +23,10 @@
     display: grid;
     align-content: start;
     row-gap: 2.5rem;
+
+    @media (70em <= width <= correlated-breakpoints.$realtors-go-down) {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 5rem;
+    }
   }
 }
